@@ -12,47 +12,82 @@
 :root{
   --green:#09A961;--green-light:#E1F5EE;--green-dark:#085041;--green-mid:#0F6E56;
   --coral:#D85A30;--coral-light:#FAECE7;--coral-dark:#712B13;
-  --amber:#FDB913;--blue-light:#E6F1FB;--blue-dark:#0C447C;
-  --purple-light:#EEEDFE;--purple-dark:#26215C;--amber-light:#FAEEDA;--amber-dark:#633806;
-  --gray-light:#F1EFE8;--gray-dark:#444441;--pink-light:#FBEAF0;--pink-dark:#72243E;
-  --bg:#F4F3F0;--surface:#FFFFFF;--border:rgba(0,0,0,0.09);--border-strong:rgba(0,0,0,0.16);
+  --amber:#FDB913;--amber-light:#FAEEDA;--amber-dark:#633806;
+  --blue-light:#E6F1FB;--blue-dark:#0C447C;
+  --purple-light:#EEEDFE;--purple-dark:#26215C;
+  --gray-light:#F1EFE8;--gray-dark:#444441;
+  --pink-light:#FBEAF0;--pink-dark:#72243E;
+  --bg:#F4F3F0;--surface:#FFFFFF;
+  --border:rgba(0,0,0,0.09);--border-strong:rgba(0,0,0,0.16);
   --text:#181816;--text-2:#5E5E5A;--text-3:#97978F;
   --radius:14px;--radius-sm:9px;
 }
 body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:1.75rem 1.25rem 3rem;font-size:15px}
 .app{max-width:780px;margin:0 auto}
+
+/* HEADER */
 .hdr{background:var(--green);border-radius:var(--radius);padding:1.25rem 1.75rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:16px}
 .hdr-icon{width:42px;height:42px;background:white;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hdr-icon svg{width:24px;height:24px}
 .hdr-eyebrow{font-size:11px;font-weight:500;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
-.hdr-title{color:white;font-size:17px;font-weight:500;margin:0}
-.hdr-sub{color:rgba(255,255,255,0.8);font-size:12px;margin:0}
+.hdr-title{color:white;font-size:17px;font-weight:500}
+.hdr-sub{color:rgba(255,255,255,0.8);font-size:12px}
+
+/* PROGRESS */
 .progress-wrap{margin-bottom:1.5rem}
 .progress-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--text-2);margin-bottom:7px}
 .progress-track{height:3px;background:rgba(0,0,0,0.08);border-radius:2px;overflow:hidden}
 .progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .4s ease}
+
+/* CARD */
 .card{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);padding:1.625rem 1.75rem;margin-bottom:1.125rem}
-.step-eyebrow{font-size:11px;font-weight:500;color:var(--green);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
-.step-title{font-size:20px;font-weight:500;color:var(--text);margin-bottom:6px;line-height:1.3}
-.step-sub{font-size:13px;color:var(--text-2);line-height:1.65;margin-bottom:1.375rem}
+.eyebrow{font-size:11px;font-weight:500;color:var(--green);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.card-title{font-size:20px;font-weight:500;color:var(--text);margin-bottom:6px;line-height:1.3}
+.card-sub{font-size:13px;color:var(--text-2);line-height:1.65;margin-bottom:1.375rem}
+
+/* FORM */
 .field{display:flex;flex-direction:column;gap:6px;margin-bottom:1.125rem}
 .field label{font-size:13px;color:var(--text-2)}
-.field select,.field input{border:0.5px solid var(--border-strong);border-radius:var(--radius-sm);padding:10px 14px;font-size:14px;background:var(--surface);color:var(--text);font-family:'Poppins',sans-serif;appearance:none;-webkit-appearance:none;transition:border-color .15s;outline:none}
+.field select,.field input{border:0.5px solid var(--border-strong);border-radius:var(--radius-sm);padding:10px 14px;font-size:14px;background:var(--surface);color:var(--text);font-family:'Poppins',sans-serif;appearance:none;-webkit-appearance:none;outline:none;transition:border-color .15s}
 .field select:focus,.field input:focus{border-color:var(--green)}
 .field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
 .field input::placeholder{color:var(--text-3)}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:1.25rem}
-.m-card{background:var(--bg);border-radius:var(--radius-sm);padding:12px 14px}
-.m-label{font-size:11px;color:var(--text-3);margin-bottom:4px}
-.m-val{font-size:20px;font-weight:500;color:var(--text);line-height:1.2}
-.m-bench{font-size:11px;margin-top:4px}
-.gap-bad{color:#993C1D}.gap-good{color:var(--green-mid)}.gap-neu{color:var(--text-3)}
-.rev-banner{background:var(--green-light);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:1.25rem;display:flex;align-items:center;gap:14px}
-.rev-icon{width:32px;height:32px;background:var(--green);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* REVENUE BANNER */
+.rev-banner{border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:1.25rem;display:flex;align-items:center;gap:14px}
+.rev-banner.good{background:var(--green-light)}
+.rev-banner.bad{background:var(--coral-light)}
+.rev-icon{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rev-banner.good .rev-icon{background:var(--green)}
+.rev-banner.bad .rev-icon{background:var(--coral)}
 .rev-icon svg{width:16px;height:16px}
-.rev-text{font-size:13px;color:var(--green-dark);line-height:1.55}
+.rev-text{font-size:13px;line-height:1.55}
+.rev-banner.good .rev-text{color:var(--green-dark)}
+.rev-banner.bad .rev-text{color:var(--coral-dark)}
 .rev-text strong{font-weight:500}
+
+/* KPI AREA CARDS (performance page) */
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.kpi-area{border:0.5px solid var(--border-strong);border-radius:11px;padding:14px 16px;cursor:pointer;transition:border-color .18s,box-shadow .18s,transform .1s;background:var(--surface);position:relative;user-select:none}
+.kpi-area:hover{border-color:var(--green);box-shadow:0 2px 12px rgba(9,169,97,0.12);transform:translateY(-1px)}
+.kpi-area.has-goal{border:1.5px solid var(--green);background:var(--green-light)}
+.kpi-area-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.kpi-area-label{font-size:11px;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em}
+.kpi-area-flag{font-size:10px;padding:2px 8px;border-radius:5px;font-weight:500;white-space:nowrap}
+.flag-gap{background:var(--coral-light);color:var(--coral-dark)}
+.flag-ok{background:var(--green-light);color:var(--green-mid)}
+.flag-goal{background:var(--green);color:white}
+.kpi-area-val{font-size:24px;font-weight:500;color:var(--text);line-height:1.1;margin-bottom:3px}
+.kpi-area-delta{font-size:11px}
+.kpi-area-bench{font-size:11px;color:var(--text-3);margin-top:4px}
+.kpi-area-add{position:absolute;bottom:12px;right:14px;font-size:11px;color:var(--green);font-weight:500;opacity:0;transition:opacity .15s}
+.kpi-area:hover .kpi-area-add{opacity:1}
+.kpi-area.has-goal .kpi-area-add{display:none}
+.goal-indicator{position:absolute;bottom:12px;right:14px;font-size:10px;color:var(--green-mid);font-weight:500}
+.gap-bad{color:#993C1D}.gap-good{color:var(--green-mid)}.gap-neu{color:var(--text-3)}
+
+/* DECISION TREE */
 .q-context{font-size:12px;color:var(--text-2);line-height:1.65;background:var(--bg);border-radius:var(--radius-sm);padding:11px 14px;margin-bottom:14px}
 .q-options{display:flex;flex-direction:column;gap:9px}
 .q-opt{background:var(--surface);border:0.5px solid var(--border-strong);border-radius:11px;padding:13px 16px;cursor:pointer;text-align:left;transition:border-color .15s,background .15s;width:100%;font-family:'Poppins',sans-serif}
@@ -62,25 +97,59 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
 .q-opt.selected .q-opt-title{color:var(--green-dark)}
 .q-opt-sub{font-size:12px;color:var(--text-2);margin-top:3px;line-height:1.45}
 .q-opt.selected .q-opt-sub{color:var(--green-mid)}
-.meter-wrap{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:1.125rem}
-.meter-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
+
+/* GOAL PROPOSAL */
+.goal-proposal{background:var(--bg);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:1rem}
+.proposal-label{font-size:10px;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.proposal-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:10px}
+.proposal-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px}
+.pkpi{background:var(--surface);border-radius:8px;padding:9px 11px}
+.pkpi-label{font-size:10px;color:var(--text-3);margin-bottom:3px}
+.pkpi-val{font-size:15px;font-weight:500;color:var(--text)}
+.pkpi-delta{font-size:10px;margin-top:2px}
+.proposal-tasks-label{font-size:10px;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.task-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px}
+.task-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px}
+.task-text{font-size:12px;color:var(--text);line-height:1.6}
+.target-chip{display:inline-block;background:var(--green);color:white;font-size:9px;padding:1px 7px;border-radius:4px;margin-left:5px;font-weight:500;vertical-align:middle}
+
+/* WORKLOAD METER */
+.meter-bar{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);padding:14px 18px;margin-bottom:1rem}
+.meter-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .meter-label{font-size:13px;font-weight:500;color:var(--text)}
 .meter-count{font-size:12px;color:var(--text-2)}
 .meter-track{height:9px;background:var(--bg);border-radius:5px;overflow:hidden;border:0.5px solid var(--border)}
 .meter-fill{height:100%;border-radius:5px;transition:width .3s ease,background .3s ease}
 .meter-ticks{display:flex;justify-content:space-between;margin-top:5px}
 .meter-tick{font-size:10px;color:var(--text-3)}
-.meter-warn{font-size:11px;color:#993C1D;margin-top:7px;display:none}
-.goal-card{border:0.5px solid var(--border);border-radius:11px;margin-bottom:9px;overflow:hidden}
-.goal-header{padding:13px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;background:var(--surface);transition:background .1s}
-.goal-header:hover{background:var(--bg)}
-.goal-check{width:20px;height:20px;border-radius:5px;border:1.5px solid var(--border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s}
-.goal-check.checked{background:var(--green);border-color:var(--green)}
-.goal-check svg{width:11px;height:11px;display:none}
-.goal-check.checked svg{display:block}
-.goal-title-wrap{flex:1;min-width:0}
-.goal-title{font-size:14px;font-weight:500;color:var(--text)}
-.goal-badges{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap}
+.meter-warn{font-size:11px;color:#993C1D;margin-top:6px;display:none}
+
+/* ACTION PLAN */
+.plan-goal{border:0.5px solid var(--border);border-radius:11px;margin-bottom:9px;overflow:hidden}
+.plan-goal-header{padding:13px 16px;display:flex;align-items:center;gap:12px;background:var(--surface)}
+.plan-goal-icon{width:28px;height:28px;border-radius:6px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.plan-goal-icon svg{width:14px;height:14px}
+.plan-goal-info{flex:1;min-width:0}
+.plan-goal-title{font-size:13px;font-weight:500;color:var(--text)}
+.plan-goal-target{font-size:11px;color:var(--green-mid);margin-top:2px}
+.plan-goal-meta{display:flex;gap:6px;margin-top:4px}
+.plan-goal-wt{font-size:10px;color:var(--text-3);white-space:nowrap}
+.plan-goal-delete{background:none;border:none;cursor:pointer;color:var(--text-3);padding:4px;border-radius:5px;transition:color .15s,background .15s;font-size:13px;line-height:1}
+.plan-goal-delete:hover{color:var(--coral);background:var(--coral-light)}
+.plan-tasks{padding:0 16px 12px 56px;background:var(--bg)}
+.plan-task-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;padding-top:2px}
+.plan-task-dot{width:4px;height:4px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px}
+.plan-task-text{font-size:11px;color:var(--text);line-height:1.6}
+
+/* SUMMARY COVER */
+.summary-cover{background:var(--green);border-radius:var(--radius);padding:2rem 1.75rem;margin-bottom:1.125rem}
+.cover-eyebrow{font-size:11px;font-weight:500;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:.09em;margin-bottom:1rem}
+.cover-title{font-size:28px;font-weight:500;color:white;margin-bottom:5px;line-height:1.2}
+.cover-sub{font-size:14px;color:rgba(255,255,255,0.82);margin-bottom:1.25rem;line-height:1.5}
+.cover-chips{display:flex;gap:9px;flex-wrap:wrap}
+.cover-chip{background:rgba(255,255,255,0.18);border-radius:7px;padding:6px 14px;font-size:12px;color:white}
+
+/* BADGE */
 .badge{font-size:10px;padding:2px 8px;border-radius:5px;font-weight:500}
 .b-sv{background:var(--blue-light);color:var(--blue-dark)}
 .b-hd{background:var(--purple-light);color:var(--purple-dark)}
@@ -88,24 +157,13 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
 .b-mat{background:var(--coral-light);color:var(--coral-dark)}
 .b-sup{background:var(--gray-light);color:var(--gray-dark)}
 .b-nps{background:var(--pink-light);color:var(--pink-dark)}
-.b-gap{background:var(--coral-light);color:var(--coral-dark)}
 .b-stretch{background:var(--gray-light);color:var(--gray-dark)}
-.goal-weight{font-size:11px;color:var(--text-3);white-space:nowrap;flex-shrink:0}
-.goal-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:0 16px 10px 48px;background:var(--surface);border-top:0.5px solid var(--border)}
-.kpi-card{background:var(--bg);border-radius:8px;padding:9px 11px;margin-top:10px}
-.kpi-label{font-size:10px;color:var(--text-3);margin-bottom:3px;line-height:1.3}
-.kpi-val{font-size:16px;font-weight:500;color:var(--text)}
-.kpi-delta{font-size:10px;margin-top:2px}
-.subtask-wrap{padding:10px 16px 14px 48px;background:var(--surface);border-top:0.5px solid var(--border)}
-.subtask-section-label{font-size:10px;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;padding-top:4px}
-.subtask-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px}
-.subtask-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px}
-.subtask-text{font-size:12px;color:var(--text);line-height:1.6}
-.target-chip{display:inline-block;background:var(--green);color:white;font-size:9px;padding:1px 7px;border-radius:4px;margin-left:5px;font-weight:500;vertical-align:middle}
-.divider-line{border:none;border-top:0.5px solid var(--border);margin:1rem 0}
-.divider-label{display:flex;align-items:center;gap:9px;margin:1rem 0}
-.divider-label span{font-size:11px;color:var(--text-3);white-space:nowrap}
-.divider-label::before,.divider-label::after{content:'';flex:1;border-top:0.5px solid var(--border)}
+.b-gap{background:var(--coral-light);color:var(--coral-dark)}
+
+/* DIVIDER */
+.divider{border:none;border-top:0.5px solid var(--border);margin:1rem 0}
+
+/* BUTTONS */
 .btn-row{display:flex;gap:9px;justify-content:flex-end;margin-top:1.375rem;flex-wrap:wrap}
 .btn-primary{background:var(--green);color:white;border:none;padding:10px 24px;border-radius:var(--radius-sm);font-size:13px;font-weight:500;cursor:pointer;font-family:'Poppins',sans-serif;transition:opacity .15s}
 .btn-primary:hover{opacity:.88}
@@ -114,27 +172,20 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
 .btn-sec:hover{background:var(--green-light)}
 .btn-ghost{background:transparent;color:var(--text-2);border:0.5px solid var(--border-strong);padding:9px 20px;border-radius:var(--radius-sm);font-size:13px;font-weight:400;cursor:pointer;font-family:'Poppins',sans-serif;transition:background .15s}
 .btn-ghost:hover{background:var(--bg)}
-.summary-cover{background:var(--green);border-radius:var(--radius);padding:2rem 1.75rem;margin-bottom:1.125rem}
-.cover-eyebrow{font-size:11px;font-weight:500;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:.09em;margin-bottom:1rem}
-.cover-title{font-size:28px;font-weight:500;color:white;margin-bottom:5px;line-height:1.2}
-.cover-sub{font-size:14px;color:rgba(255,255,255,0.82);margin-bottom:1.25rem;line-height:1.5}
-.cover-chips{display:flex;gap:9px;flex-wrap:wrap}
-.cover-chip{background:rgba(255,255,255,0.18);border-radius:7px;padding:6px 14px;font-size:12px;color:white}
-.summary-row{display:flex;justify-content:space-between;align-items:flex-start;padding:11px 0;border-bottom:0.5px solid var(--border)}
-.summary-row:last-child{border-bottom:none}
-.s-goal{font-size:13px;font-weight:500;color:var(--text)}
-.s-target{font-size:12px;color:var(--green-mid);margin-top:3px}
-.s-tasks{font-size:12px;color:var(--text-2);flex-shrink:0;padding-left:14px;text-align:right}
-.fade-in{animation:fadeIn .25s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ANIMATIONS */
+.fade-in{animation:fadeIn .22s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 .hidden{display:none!important}
+
+/* PRINT */
 @media print{
   body{background:white;padding:0}
-  .hdr,.progress-wrap,.btn-row,.meter-wrap{display:none!important}
+  .hdr,.progress-wrap,.btn-row,.meter-bar,.no-print{display:none!important}
   .card{border:none;padding:.5rem 0;box-shadow:none}
   .summary-cover{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .goal-card{break-inside:avoid}
-  .subtask-wrap,.goal-kpis{display:block!important}
+  .plan-goal{break-inside:avoid}
+  .plan-tasks{display:block!important}
   .app{max-width:100%}
 }
 </style>
@@ -142,6 +193,7 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
 <body>
 <div class="app">
 
+<!-- HEADER -->
 <div class="hdr">
   <div class="hdr-icon">
     <svg viewBox="0 0 22 22" fill="none"><path d="M11 2L3 6.5v9L11 20l8-4.5v-9L11 2z" fill="#09A961"/><path d="M11 5.5l4.5 2.75v5.5L11 16.5l-4.5-2.75v-5.5L11 5.5z" fill="white"/></svg>
@@ -153,19 +205,21 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
   </div>
 </div>
 
+<!-- PROGRESS -->
 <div class="progress-wrap">
-  <div class="progress-meta"><span id="prog-label">Step 1 of 4 — Select hospital</span><span id="prog-pct">0%</span></div>
+  <div class="progress-meta"><span id="prog-label">Step 1 of 3 — Select hospital</span><span id="prog-pct">0%</span></div>
   <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
 </div>
 
+<!-- VIEW: SELECT -->
 <div id="view-select" class="fade-in">
   <div class="card">
-    <div class="step-eyebrow">Getting started</div>
-    <div class="step-title">Set up your goal session</div>
-    <div class="step-sub">Select the hospital you're setting Q2 2026 goals for, based on Q1 2026 performance. Enter your name — it will appear on the final action plan.</div>
+    <div class="eyebrow">Getting started</div>
+    <div class="card-title">Set up your goal session</div>
+    <div class="card-sub">Select the hospital you're setting Q2 2026 goals for, based on Q1 2026 performance. Enter your name — it will appear on the final action plan.</div>
     <div class="field">
       <label>Hospital</label>
-      <select id="hosp-sel" onchange="checkStep1()">
+      <select id="hosp-sel" onchange="checkS1()">
         <option value="">Select a hospital...</option>
         <option value="2">WA - Olympia - South Bay</option>
         <option value="30">TX - Midland - Medical</option>
@@ -177,11 +231,11 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
     <div class="field-row">
       <div class="field">
         <label>Prepared by</label>
-        <input type="text" id="preparer-name" placeholder="Your name" oninput="checkStep1()">
+        <input type="text" id="preparer" placeholder="Your name" oninput="checkS1()">
       </div>
       <div class="field">
         <label>Quarter</label>
-        <select id="quarter-sel" onchange="checkStep1()">
+        <select id="quarter-sel" onchange="checkS1()">
           <option value="Q2 2026" selected>Q2 2026</option>
           <option value="Q3 2026">Q3 2026</option>
           <option value="Q4 2026">Q4 2026</option>
@@ -189,31 +243,34 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
         </select>
       </div>
     </div>
-    <div class="btn-row"><button class="btn-primary" id="btn-s1-next" onclick="goData()" disabled>Review Q1 performance →</button></div>
+    <div class="btn-row"><button class="btn-primary" id="btn-s1" onclick="goPerf()" disabled>Review Q1 performance →</button></div>
   </div>
 </div>
 
-<div id="view-data" class="hidden fade-in">
+<!-- VIEW: PERFORMANCE -->
+<div id="view-perf" class="hidden fade-in">
   <div class="card">
-    <div class="step-eyebrow">Step 2 — Q1 2026 performance snapshot</div>
-    <div class="step-title" id="data-title"></div>
-    <div class="step-sub" id="data-sub"></div>
-    <div class="rev-banner" id="rev-banner"></div>
-    <div class="metric-grid" id="metric-grid"></div>
+    <div class="eyebrow">Step 2 — Q1 2026 performance</div>
+    <div class="card-title" id="perf-title"></div>
+    <div class="card-sub" id="perf-sub"></div>
+    <div id="rev-banner" class="rev-banner"></div>
+    <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:10px">Where would you like to set a goal? <span style="font-weight:400;color:var(--text-2)">Select any area below.</span></div>
+    <div class="kpi-grid" id="kpi-grid"></div>
     <div class="btn-row">
       <button class="btn-ghost" onclick="goSelect()">← Back</button>
-      <button class="btn-primary" onclick="startTree()">Begin goal-setting →</button>
+      <button class="btn-primary" id="btn-view-plan" onclick="goPlan()" style="display:none">View action plan →</button>
     </div>
   </div>
 </div>
 
+<!-- VIEW: DECISION TREE (modal-style card) -->
 <div id="view-tree" class="hidden fade-in">
   <div class="card">
-    <div class="step-eyebrow" id="tree-eyebrow"></div>
-    <div class="step-title" id="tree-title"></div>
-    <div class="step-sub" id="tree-sub"></div>
+    <div class="eyebrow" id="tree-eyebrow"></div>
+    <div class="card-title" id="tree-title"></div>
+    <div class="card-sub" id="tree-sub"></div>
     <div id="tree-context" class="q-context hidden"></div>
-    <div class="q-options" id="tree-options"></div>
+    <div class="q-options" id="tree-opts"></div>
     <div class="btn-row">
       <button class="btn-ghost" id="btn-tree-back" onclick="treePrev()">← Back</button>
       <button class="btn-primary" id="btn-tree-next" onclick="treeNext()" disabled>Continue →</button>
@@ -221,206 +278,425 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);min
   </div>
 </div>
 
-<div id="view-goals" class="hidden fade-in">
-  <div class="meter-wrap">
-    <div class="meter-hdr">
-      <div class="meter-label">Quarterly workload</div>
-      <div class="meter-count" id="meter-count">0 / 10 weight points selected</div>
+<!-- VIEW: GOAL PROPOSAL -->
+<div id="view-proposal" class="hidden fade-in">
+  <div class="card">
+    <div class="eyebrow" id="prop-eyebrow"></div>
+    <div class="card-title">Here's your recommended goal</div>
+    <div class="card-sub">Based on your data and answers, here's what we recommend. Review and add it to your action plan.</div>
+    <div class="goal-proposal" id="prop-content"></div>
+    <div class="btn-row">
+      <button class="btn-ghost" onclick="goTreeFromProp()">← Revisit answers</button>
+      <button class="btn-primary" onclick="addGoalToPlan()">Add to action plan →</button>
     </div>
-    <div class="meter-track"><div class="meter-fill" id="meter-fill" style="width:0%;background:#09A961"></div></div>
-    <div class="meter-ticks"><span class="meter-tick">Light</span><span class="meter-tick">Full</span></div>
-    <div class="meter-warn" id="meter-warn">You're over the recommended quarterly load. Consider deferring lower-priority goals.</div>
-  </div>
-  <div id="goals-list"></div>
-  <div class="btn-row">
-    <button class="btn-ghost" onclick="goTree()">← Revisit answers</button>
-    <button class="btn-primary" id="btn-goals-next" onclick="goSummary()" disabled>Build action plan →</button>
   </div>
 </div>
 
-<div id="view-summary" class="hidden fade-in">
+<!-- VIEW: ACTION PLAN -->
+<div id="view-plan" class="hidden fade-in">
   <div class="summary-cover">
     <div class="cover-eyebrow">Vetcor · Leader Toolkit</div>
     <div class="cover-title">Your Action Plan</div>
-    <div class="cover-sub" id="cover-sub"></div>
+    <div class="cover-sub" id="plan-cover-sub"></div>
     <div class="cover-chips">
-      <div class="cover-chip" id="chip-hosp"></div>
-      <div class="cover-chip" id="chip-by"></div>
-      <div class="cover-chip" id="chip-date"></div>
-      <div class="cover-chip" id="chip-quarter"></div>
+      <div class="cover-chip" id="plan-chip-hosp"></div>
+      <div class="cover-chip" id="plan-chip-by"></div>
+      <div class="cover-chip" id="plan-chip-date"></div>
+      <div class="cover-chip" id="plan-chip-q"></div>
     </div>
   </div>
-  <div class="card">
-    <div style="font-size:11px;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:13px">Selected goals this quarter</div>
-    <div id="summary-list"></div>
-    <hr class="divider-line" style="margin-top:.5rem">
-    <div style="display:flex;justify-content:space-between;padding-top:5px">
-      <span style="font-size:12px;color:var(--text-2)">Total quarterly workload</span>
-      <span style="font-size:12px;font-weight:500" id="sum-weight"></span>
+  <div class="meter-bar">
+    <div class="meter-top">
+      <div class="meter-label">Quarterly workload</div>
+      <div class="meter-count" id="plan-meter-count">0 / 10 weight points</div>
     </div>
+    <div class="meter-track"><div class="meter-fill" id="plan-meter-fill" style="width:0%;background:#09A961"></div></div>
+    <div class="meter-ticks"><span class="meter-tick">Light</span><span class="meter-tick">Full</span></div>
+    <div class="meter-warn" id="plan-meter-warn">You're over the recommended quarterly load. Consider removing a lower-priority goal.</div>
   </div>
-  <div class="card" id="sum-detail"></div>
+  <div id="plan-goals-list"></div>
+  <div id="plan-empty" class="hidden" style="text-align:center;padding:2rem 1rem;color:var(--text-3);font-size:13px">No goals added yet. Add a goal to get started.</div>
   <div class="btn-row">
-    <button class="btn-ghost" onclick="goGoals()">← Edit goals</button>
+    <button class="btn-ghost" onclick="restart()">Start over ↗</button>
     <button class="btn-sec" onclick="window.print()">Print / Save PDF</button>
-    <button class="btn-primary" onclick="restart()">New hospital ↗</button>
+    <button class="btn-primary" onclick="goPerf()">+ Add another goal</button>
   </div>
 </div>
 
-</div>
+</div><!-- /app -->
+
 <script>
-const HOSPITALS={2:{id:2,name:"WA - Olympia - South Bay",short:"South Bay",region:"Pacific",q1_revenue:1658589,rev_yoy:17.7,bench_rev_yoy:4.1,sv_per_dvmday:14.2,bench_sv_per_dvmday:13.3,sv_yoy:-7.6,retention_rate:73.2,bench_retention:63.0,growth_rate:15.2,materials_pct:14.6,bench_materials_pct:15.0,top_mat_label:"Reference Lab",top_mat_pct:2.8,top_mat_bench:2.4,hd_pct:5.6,bench_hd_pct:5.6,hd_yoy:2.3,hd_shipped_rev:93660,new_client_rate:4.2,bench_new_client_rate:4.2,nc_yoy:2.1,bench_nc_yoy:-5.7,nc_per_dd:0.76,bench_nc_per_dd:0.76,nps:94.1,bench_nps:90.3,support_payroll_pct:17.8,bench_support_payroll_pct:20.6,ot_pct_payroll:0.4,staff_hours_per_sv:2.46,bench_staff_hours_per_sv:2.5,active_docs:8,active_support:39},30:{id:30,name:"TX - Midland - Medical",short:"Midland Medical",region:"West South Central",q1_revenue:465375,rev_yoy:7.0,bench_rev_yoy:-0.2,sv_per_dvmday:9.4,bench_sv_per_dvmday:12.4,sv_yoy:-9.1,retention_rate:76.4,bench_retention:58.3,growth_rate:-4.2,materials_pct:20.1,bench_materials_pct:17.1,top_mat_label:"In House Lab",top_mat_pct:4.0,top_mat_bench:1.6,hd_pct:5.7,bench_hd_pct:7.1,hd_yoy:3.7,hd_shipped_rev:26569,new_client_rate:1.9,bench_new_client_rate:4.4,nc_yoy:-6.2,bench_nc_yoy:-12.2,nc_per_dd:0.34,bench_nc_per_dd:0.74,nps:95.5,bench_nps:93.0,support_payroll_pct:17.5,bench_support_payroll_pct:19.8,ot_pct_payroll:4.4,staff_hours_per_sv:3.22,bench_staff_hours_per_sv:2.84,active_docs:2,active_support:9},1317:{id:1317,name:"SC - Sumter - AMC",short:"Sumter AMC",region:"South Atlantic",q1_revenue:574086,rev_yoy:10.0,bench_rev_yoy:0.6,sv_per_dvmday:15.9,bench_sv_per_dvmday:12.7,sv_yoy:0.6,retention_rate:70.6,bench_retention:61.4,growth_rate:-4.5,materials_pct:24.2,bench_materials_pct:17.5,top_mat_label:"Medical Supplies",top_mat_pct:21.5,top_mat_bench:16.2,hd_pct:2.1,bench_hd_pct:8.5,hd_yoy:2.1,hd_shipped_rev:11968,new_client_rate:2.9,bench_new_client_rate:4.4,nc_yoy:10.6,bench_nc_yoy:-13.7,nc_per_dd:0.87,bench_nc_per_dd:0.8,nps:100.0,bench_nps:93.3,support_payroll_pct:13.3,bench_support_payroll_pct:18.8,ot_pct_payroll:0.7,staff_hours_per_sv:1.79,bench_staff_hours_per_sv:2.69,active_docs:3,active_support:9},1513:{id:1513,name:"WI - Kiel - Kiel VC",short:"Kiel VC",region:"East North Central",q1_revenue:737239,rev_yoy:-13.3,bench_rev_yoy:3.7,sv_per_dvmday:8.8,bench_sv_per_dvmday:12.9,sv_yoy:-12.1,retention_rate:68.9,bench_retention:66.2,growth_rate:-17.2,materials_pct:29.7,bench_materials_pct:17.9,top_mat_label:"Medical Supplies",top_mat_pct:30.9,top_mat_bench:16.7,hd_pct:6.1,bench_hd_pct:8.0,hd_yoy:3.6,hd_shipped_rev:45140,new_client_rate:1.5,bench_new_client_rate:3.7,nc_yoy:69.6,bench_nc_yoy:-4.6,nc_per_dd:0.18,bench_nc_per_dd:0.68,nps:null,bench_nps:92.6,support_payroll_pct:18.6,bench_support_payroll_pct:18.7,ot_pct_payroll:5.0,staff_hours_per_sv:3.36,bench_staff_hours_per_sv:2.51,active_docs:8,active_support:21},1582:{id:1582,name:"CA - Manhattan Beach - Manhattan Beach AH",short:"Manhattan Beach AH",region:"Pacific",q1_revenue:373528,rev_yoy:11.9,bench_rev_yoy:4.1,sv_per_dvmday:7.4,bench_sv_per_dvmday:13.3,sv_yoy:4.6,retention_rate:69.3,bench_retention:63.0,growth_rate:-4.4,materials_pct:14.7,bench_materials_pct:15.0,top_mat_label:"Reference Lab",top_mat_pct:4.2,top_mat_bench:2.4,hd_pct:4.1,bench_hd_pct:5.6,hd_yoy:3.3,hd_shipped_rev:15177,new_client_rate:3.4,bench_new_client_rate:4.2,nc_yoy:-9.1,bench_nc_yoy:-5.7,nc_per_dd:0.32,bench_nc_per_dd:0.76,nps:100.0,bench_nps:90.3,support_payroll_pct:25.1,bench_support_payroll_pct:20.6,ot_pct_payroll:1.2,staff_hours_per_sv:2.68,bench_staff_hours_per_sv:2.5,active_docs:3,active_support:8}};
-
-function fmt$(n){return'$'+n.toLocaleString('en-US',{maximumFractionDigits:0})}
-function fmtYoY(n){return(n>=0?'+':'')+n.toFixed(1)+'%'}
-function ppsDelta(a,b){const d=a-b;return(d>0?'+':'')+d.toFixed(1)+' pps'}
-function kpi(label,val,delta,good){
-  const cls=delta===null?'gap-neu':good?'gap-good':'gap-bad';
-  return '<div class="kpi-card"><div class="kpi-label">'+label+'</div><div class="kpi-val">'+val+'</div>'+(delta!==null?'<div class="kpi-delta '+cls+'">'+delta+'</div>':'')+'</div>';
-}
-
-const GOAL_DEFS={
-  sv_capacity:{title:"Grow service visits — expand capacity",badge:"b-sv",badgeLabel:"Service visits",weight:8,
-    kpisFn:h=>[kpi('SV / DVM day',h.sv_per_dvmday.toFixed(1),ppsDelta(h.sv_per_dvmday,h.bench_sv_per_dvmday)+' vs bench',h.sv_per_dvmday>=h.bench_sv_per_dvmday),kpi('SV/DD YoY',fmtYoY(h.sv_yoy),fmtYoY(h.sv_yoy),h.sv_yoy>=0),kpi('Retention',h.retention_rate+'%',ppsDelta(h.retention_rate,h.bench_retention)+' vs bench',h.retention_rate>=h.bench_retention)],
-    subtasksFn:(h,ans)=>{let t=[{t:"Extend operating hours to create additional appointment slots"},{t:"Reduce schedule blocking — target 85%+ of slots available"},{t:"Accept drop-off appointments to increase daily throughput"},{t:"Accept walk-in appointments during off-peak hours"}];if(ans.retention_below){t.push({t:"Increase client retention — implement recall and reactivation campaigns"});t.push({t:"Increase wellness visit frequency through proactive reminders"});}t.push({t:"Target: grow SV/DVM day from "+h.sv_per_dvmday+" → "+Math.round(h.bench_sv_per_dvmday*1.05*10)/10,target:true});return t;}},
-  sv_demand:{title:"Grow service visits — increase demand",badge:"b-sv",badgeLabel:"Service visits",weight:6,
-    kpisFn:h=>[kpi('SV / DVM day',h.sv_per_dvmday.toFixed(1),ppsDelta(h.sv_per_dvmday,h.bench_sv_per_dvmday)+' vs bench',h.sv_per_dvmday>=h.bench_sv_per_dvmday),kpi('SV/DD YoY',fmtYoY(h.sv_yoy),fmtYoY(h.sv_yoy),h.sv_yoy>=0),kpi('Retention',h.retention_rate+'%',ppsDelta(h.retention_rate,h.bench_retention)+' vs bench',h.retention_rate>=h.bench_retention)],
-    subtasksFn:(h,ans)=>{let t=[];if(ans.retention_below)t=[{t:"Increase client retention — launch recall and reactivation program"},{t:"Increase wellness visit frequency through proactive reminders"}];t=t.concat([{t:"Implement PetDesk and Vetstoria best practices for online booking"},{t:"Implement forward booking at every appointment"},{t:"Enable digital marketing to grow local awareness"},{t:"Launch referral promotion program"},{t:"Use Tail-o-Phone: set daily outbound call target"},{t:"Increase outbound texts per day for reactivation"}]);t.push({t:"Target: grow SV/DVM day from "+h.sv_per_dvmday+" → "+Math.round(h.bench_sv_per_dvmday*1.05*10)/10,target:true});return t;}},
-  new_clients_mktg:{title:"Grow new client acquisition",badge:"b-nc",badgeLabel:"New clients",weight:4,
-    kpisFn:h=>[kpi('New clients / DD',h.nc_per_dd.toFixed(2),ppsDelta(h.nc_per_dd,h.bench_nc_per_dd)+' vs bench',h.nc_per_dd>=h.bench_nc_per_dd),kpi('New client YoY',fmtYoY(h.nc_yoy),'bench: '+fmtYoY(h.bench_nc_yoy),h.nc_yoy>=h.bench_nc_yoy),kpi('New client rate',h.new_client_rate+'%',ppsDelta(h.new_client_rate,h.bench_new_client_rate)+' vs bench',h.new_client_rate>=h.bench_new_client_rate)],
-    subtasksFn:(h,ans)=>[{t:"Enable digital marketing — Google, social, local SEO"},{t:"Increase organic social media posts (target 3+ per week)"},{t:"Launch a structured referral incentive program"},{t:"Respond to 100% of positive online reviews organically"},{t:"Respond to 100% of negative online reviews with a resolution path"},{t:"Implement PetDesk / Vetstoria best practices to reduce new client friction"},{t:"Target: new clients/DVM day from "+h.nc_per_dd.toFixed(2)+" → "+Math.round(h.bench_nc_per_dd*1.1*100)/100,target:true}]},
-  new_clients_access:{title:"Grow new client acquisition — remove barriers",badge:"b-nc",badgeLabel:"New clients",weight:6,
-    kpisFn:h=>[kpi('New clients / DD',h.nc_per_dd.toFixed(2),ppsDelta(h.nc_per_dd,h.bench_nc_per_dd)+' vs bench',h.nc_per_dd>=h.bench_nc_per_dd),kpi('New client YoY',fmtYoY(h.nc_yoy),'bench: '+fmtYoY(h.bench_nc_yoy),h.nc_yoy>=h.bench_nc_yoy),kpi('New client rate',h.new_client_rate+'%',ppsDelta(h.new_client_rate,h.bench_new_client_rate)+' vs bench',h.new_client_rate>=h.bench_new_client_rate)],
-    subtasksFn:(h,ans)=>[{t:"Extend hours or add slots to accommodate new client demand"},{t:"Accept drop-off and walk-in appointments for new clients"},{t:"Enable digital marketing to capture existing local demand"},{t:"Launch referral program to leverage existing loyal client base"},{t:"Target: new clients/DVM day from "+h.nc_per_dd.toFixed(2)+" → "+Math.round(h.bench_nc_per_dd*1.1*100)/100,target:true}]},
-  hd_sop:{title:"Build home delivery platform",badge:"b-hd",badgeLabel:"Home delivery",weight:6,
-    kpisFn:h=>[kpi('HD shipped rev',fmt$(h.hd_shipped_rev),null,null),kpi('HD % of revenue',h.hd_pct.toFixed(1)+'%',ppsDelta(h.hd_pct,h.bench_hd_pct)+' vs bench',h.hd_pct>=h.bench_hd_pct),kpi('HD YoY change',(h.hd_yoy>=0?'+':'')+h.hd_yoy.toFixed(1)+' pps',null,null)],
-    subtasksFn:(h,ans)=>[{t:"Implement checkout link SOP — send HD link at every checkout"},{t:"Set a daily checkout link target for the team"},{t:"Train team on home delivery recommendation script"},{t:"Promote auto-ship at point of recommendation"},{t:"Ensure in-practice client awareness (signage, messaging)"},{t:"Target: HD revenue from "+h.hd_pct.toFixed(1)+"% → "+Math.round(h.bench_hd_pct*0.75*10)/10+"% of revenue",target:true}]},
-  hd_optimize:{title:"Optimize home delivery conversion",badge:"b-hd",badgeLabel:"Home delivery",weight:4,
-    kpisFn:h=>[kpi('HD shipped rev',fmt$(h.hd_shipped_rev),null,null),kpi('HD % of revenue',h.hd_pct.toFixed(1)+'%',ppsDelta(h.hd_pct,h.bench_hd_pct)+' vs bench',h.hd_pct>=h.bench_hd_pct),kpi('HD YoY change',(h.hd_yoy>=0?'+':'')+h.hd_yoy.toFixed(1)+' pps',null,null)],
-    subtasksFn:(h,ans)=>[{t:"Review checkout link % of service visits and set improvement target"},{t:"Increase auto-ship % of total HD orders"},{t:"Recommend standard-of-care products at checkout for HD"},{t:"Audit HD penetration by DVM to identify coaching opportunities"},{t:"Target: HD revenue from "+h.hd_pct.toFixed(1)+"% → "+Math.round(h.bench_hd_pct*1.05*10)/10+"% of revenue",target:true}]},
-  materials_aware:{title:"Reduce materials cost",badge:"b-mat",badgeLabel:"Materials %",weight:6,
-    kpisFn:h=>[kpi('Materials %',h.materials_pct.toFixed(1)+'%',ppsDelta(h.materials_pct,h.bench_materials_pct)+' vs bench',h.materials_pct<=h.bench_materials_pct),kpi('Top driver',h.top_mat_label,h.top_mat_pct+'% vs '+h.top_mat_bench+'% bench',h.top_mat_pct<=h.top_mat_bench),kpi('Benchmark',h.bench_materials_pct.toFixed(1)+'%','regional median',null)],
-    subtasksFn:(h,ans)=>[{t:"Implement a consistent weekly supply ordering schedule"},{t:"Set weekly allocation targets by category"},{t:"Review "+h.top_mat_label+" spend — currently "+h.top_mat_pct+"% vs. "+h.top_mat_bench+"% regional benchmark"},{t:"Track supplies ordering vs. weekly allocation weekly"},{t:"Audit medical supplies % of revenue monthly"},{t:"Target: materials from "+h.materials_pct.toFixed(1)+"% → "+Math.round(h.bench_materials_pct*1.05*10)/10+"% of revenue",target:true}]},
-  materials_advanced:{title:"Tighten materials cost controls",badge:"b-mat",badgeLabel:"Materials %",weight:4,
-    kpisFn:h=>[kpi('Materials %',h.materials_pct.toFixed(1)+'%',ppsDelta(h.materials_pct,h.bench_materials_pct)+' vs bench',h.materials_pct<=h.bench_materials_pct),kpi('Top driver',h.top_mat_label,h.top_mat_pct+'% vs '+h.top_mat_bench+'% bench',h.top_mat_pct<=h.top_mat_bench),kpi('Benchmark',h.bench_materials_pct.toFixed(1)+'%','regional median',null)],
-    subtasksFn:(h,ans)=>[{t:"Focus on "+h.top_mat_label+" — at "+h.top_mat_pct+"% vs. "+h.top_mat_bench+"% regional benchmark"},{t:"Tighten ordering cadence and review vendor pricing"},{t:"Set allocation targets and track weekly variance"},{t:"Review supplies ordering vs. weekly allocation"},{t:"Target: materials from "+h.materials_pct.toFixed(1)+"% → "+Math.round(h.bench_materials_pct*10)/10+"% of revenue",target:true}]},
-  support_ot:{title:"Optimize support staff scheduling",badge:"b-sup",badgeLabel:"Support payroll",weight:6,
-    kpisFn:h=>[kpi('Support payroll %',h.support_payroll_pct.toFixed(1)+'%',ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+' vs bench',h.support_payroll_pct<=h.bench_support_payroll_pct),kpi('OT % of payroll',h.ot_pct_payroll.toFixed(1)+'%',null,null),kpi('Hrs / SV',h.staff_hours_per_sv?h.staff_hours_per_sv.toFixed(2):'—',h.staff_hours_per_sv?ppsDelta(h.staff_hours_per_sv,h.bench_staff_hours_per_sv)+' vs bench':null,h.staff_hours_per_sv<=h.bench_staff_hours_per_sv)],
-    subtasksFn:(h,ans)=>[{t:"Audit overtime hours by role — OT currently "+h.ot_pct_payroll.toFixed(1)+"% of support payroll"},{t:"Implement scheduling optimization aligned to appointment volume"},{t:"Set OT % of revenue target and review weekly"},{t:"Track worked hours per service visit ("+h.staff_hours_per_sv+" vs. "+h.bench_staff_hours_per_sv+" benchmark)"},{t:"Target: support payroll from "+h.support_payroll_pct.toFixed(1)+"% → "+Math.round(h.bench_support_payroll_pct*10)/10+"% of revenue",target:true}]},
-  support_volume:{title:"Align support staffing to patient volume",badge:"b-sup",badgeLabel:"Support payroll",weight:6,
-    kpisFn:h=>[kpi('Support payroll %',h.support_payroll_pct.toFixed(1)+'%',ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+' vs bench',h.support_payroll_pct<=h.bench_support_payroll_pct),kpi('OT % of payroll',h.ot_pct_payroll.toFixed(1)+'%',null,null),kpi('Hrs / SV',h.staff_hours_per_sv?h.staff_hours_per_sv.toFixed(2):'—',h.staff_hours_per_sv?ppsDelta(h.staff_hours_per_sv,h.bench_staff_hours_per_sv)+' vs bench':null,h.staff_hours_per_sv<=h.bench_staff_hours_per_sv)],
-    subtasksFn:(h,ans)=>[{t:"Review worked hours per service visit vs. benchmark ("+h.staff_hours_per_sv+" vs. "+h.bench_staff_hours_per_sv+")"},{t:"Align shift scheduling to appointment volume patterns"},{t:"Review support staff cost per service visit monthly"},{t:"Set support payroll % of revenue target"},{t:"Target: support payroll from "+h.support_payroll_pct.toFixed(1)+"% → "+Math.round(h.bench_support_payroll_pct*10)/10+"% of revenue",target:true}]},
-  support_maintain:{title:"Maintain support staffing efficiency",badge:"b-sup",badgeLabel:"Support payroll",weight:2,
-    kpisFn:h=>[kpi('Support payroll %',h.support_payroll_pct.toFixed(1)+'%',ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+' vs bench',true),kpi('OT % of payroll',h.ot_pct_payroll.toFixed(1)+'%',null,null),kpi('Hrs / SV',h.staff_hours_per_sv?h.staff_hours_per_sv.toFixed(2):'—',null,null)],
-    subtasksFn:(h,ans)=>[{t:"Continue monitoring worked hours per service visit monthly"},{t:"Maintain scheduling discipline as visit volume grows"},{t:"Review staffing levels if service visit volume increases >10%"},{t:"Target: maintain support payroll below "+Math.round(h.bench_support_payroll_pct*10)/10+"% of revenue",target:true}]},
-  support_hire:{title:"Fill open support staff roles",badge:"b-sup",badgeLabel:"Support payroll",weight:7,
-    kpisFn:h=>[kpi('Support payroll %',h.support_payroll_pct.toFixed(1)+'%',ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+' vs bench',h.support_payroll_pct<=h.bench_support_payroll_pct),kpi('OT % of payroll',h.ot_pct_payroll.toFixed(1)+'%',null,null),kpi('Hrs / SV',h.staff_hours_per_sv?h.staff_hours_per_sv.toFixed(2):'—',null,null)],
-    subtasksFn:(h,ans)=>[{t:"Prioritize open support role hiring to relieve team strain"},{t:"Track worked hours per service visit weekly during hiring process"},{t:"Partner with HR on sourcing and onboarding pipeline"},{t:"Set interim scheduling adjustments to manage until fully staffed"}]},
-  nps:{title:"Improve client experience and NPS",badge:"b-nps",badgeLabel:"NPS",weight:3,
-    kpisFn:h=>[kpi('NPS score',h.nps!==null?h.nps.toFixed(0):'N/A',h.nps!==null?ppsDelta(h.nps,h.bench_nps)+' vs bench':null,h.nps!==null&&h.nps>=h.bench_nps),kpi('Regional bench',h.bench_nps!==null?h.bench_nps.toFixed(0):'N/A',null,null),kpi('Retention',h.retention_rate+'%',ppsDelta(h.retention_rate,h.bench_retention)+' vs bench',h.retention_rate>=h.bench_retention)],
-    subtasksFn:(h,ans)=>{const isBelow=h.nps!==null&&h.nps<h.bench_nps;let t=[{t:"Implement structured post-visit follow-up (text or email within 24 hrs)"},{t:"Review and reduce lobby wait times"},{t:"Launch a team recognition program to improve staff morale"},{t:"Respond to 100% of online reviews"}];t.push(isBelow?{t:"Target: NPS from "+h.nps.toFixed(1)+" → "+Math.round(h.bench_nps*1.05),target:true}:{t:"Target: maintain NPS above "+(h.bench_nps?Math.round(h.bench_nps):'benchmark')+" and grow to "+(h.nps?Math.round(h.nps*1.03):'stretch target'),target:true});return t;}}
+/* ─── DATA ─────────────────────────────────────────── */
+const HOSPITALS={
+  2:{id:2,name:"WA - Olympia - South Bay",short:"South Bay",region:"Pacific",q1_revenue:1658589,rev_yoy:17.7,bench_rev_yoy:4.1,sv_per_dvmday:14.2,bench_sv_per_dvmday:13.3,sv_yoy:-7.6,retention_rate:73.2,bench_retention:63.0,materials_pct:14.6,bench_materials_pct:15.0,top_mat_label:"Reference Lab",top_mat_pct:2.8,top_mat_bench:2.4,hd_pct:5.6,bench_hd_pct:5.6,hd_yoy:2.3,hd_shipped_rev:93660,new_client_rate:4.2,bench_new_client_rate:4.2,nc_yoy:2.1,bench_nc_yoy:-5.7,nc_per_dd:0.76,bench_nc_per_dd:0.76,nps:94.1,bench_nps:90.3,support_payroll_pct:17.8,bench_support_payroll_pct:20.6,ot_pct_payroll:0.4,staff_hours_per_sv:2.46,bench_staff_hours_per_sv:2.5,active_docs:8,active_support:39},
+  30:{id:30,name:"TX - Midland - Medical",short:"Midland Medical",region:"West South Central",q1_revenue:465375,rev_yoy:7.0,bench_rev_yoy:-0.2,sv_per_dvmday:9.4,bench_sv_per_dvmday:12.4,sv_yoy:-9.1,retention_rate:76.4,bench_retention:58.3,materials_pct:20.1,bench_materials_pct:17.1,top_mat_label:"In House Lab",top_mat_pct:4.0,top_mat_bench:1.6,hd_pct:5.7,bench_hd_pct:7.1,hd_yoy:3.7,hd_shipped_rev:26569,new_client_rate:1.9,bench_new_client_rate:4.4,nc_yoy:-6.2,bench_nc_yoy:-12.2,nc_per_dd:0.34,bench_nc_per_dd:0.74,nps:95.5,bench_nps:93.0,support_payroll_pct:17.5,bench_support_payroll_pct:19.8,ot_pct_payroll:4.4,staff_hours_per_sv:3.22,bench_staff_hours_per_sv:2.84,active_docs:2,active_support:9},
+  1317:{id:1317,name:"SC - Sumter - AMC",short:"Sumter AMC",region:"South Atlantic",q1_revenue:574086,rev_yoy:10.0,bench_rev_yoy:0.6,sv_per_dvmday:15.9,bench_sv_per_dvmday:12.7,sv_yoy:0.6,retention_rate:70.6,bench_retention:61.4,materials_pct:24.2,bench_materials_pct:17.5,top_mat_label:"Medical Supplies",top_mat_pct:21.5,top_mat_bench:16.2,hd_pct:2.1,bench_hd_pct:8.5,hd_yoy:2.1,hd_shipped_rev:11968,new_client_rate:2.9,bench_new_client_rate:4.4,nc_yoy:10.6,bench_nc_yoy:-13.7,nc_per_dd:0.87,bench_nc_per_dd:0.8,nps:100.0,bench_nps:93.3,support_payroll_pct:13.3,bench_support_payroll_pct:18.8,ot_pct_payroll:0.7,staff_hours_per_sv:1.79,bench_staff_hours_per_sv:2.69,active_docs:3,active_support:9},
+  1513:{id:1513,name:"WI - Kiel - Kiel VC",short:"Kiel VC",region:"East North Central",q1_revenue:737239,rev_yoy:-13.3,bench_rev_yoy:3.7,sv_per_dvmday:8.8,bench_sv_per_dvmday:12.9,sv_yoy:-12.1,retention_rate:68.9,bench_retention:66.2,materials_pct:29.7,bench_materials_pct:17.9,top_mat_label:"Medical Supplies",top_mat_pct:30.9,top_mat_bench:16.7,hd_pct:6.1,bench_hd_pct:8.0,hd_yoy:3.6,hd_shipped_rev:45140,new_client_rate:1.5,bench_new_client_rate:3.7,nc_yoy:69.6,bench_nc_yoy:-4.6,nc_per_dd:0.18,bench_nc_per_dd:0.68,nps:null,bench_nps:92.6,support_payroll_pct:18.6,bench_support_payroll_pct:18.7,ot_pct_payroll:5.0,staff_hours_per_sv:3.36,bench_staff_hours_per_sv:2.51,active_docs:8,active_support:21},
+  1582:{id:1582,name:"CA - Manhattan Beach - Manhattan Beach AH",short:"Manhattan Beach AH",region:"Pacific",q1_revenue:373528,rev_yoy:11.9,bench_rev_yoy:4.1,sv_per_dvmday:7.4,bench_sv_per_dvmday:13.3,sv_yoy:4.6,retention_rate:69.3,bench_retention:63.0,materials_pct:14.7,bench_materials_pct:15.0,top_mat_label:"Reference Lab",top_mat_pct:4.2,top_mat_bench:2.4,hd_pct:4.1,bench_hd_pct:5.6,hd_yoy:3.3,hd_shipped_rev:15177,new_client_rate:3.4,bench_new_client_rate:4.2,nc_yoy:-9.1,bench_nc_yoy:-5.7,nc_per_dd:0.32,bench_nc_per_dd:0.76,nps:100.0,bench_nps:90.3,support_payroll_pct:25.1,bench_support_payroll_pct:20.6,ot_pct_payroll:1.2,staff_hours_per_sv:2.68,bench_staff_hours_per_sv:2.5,active_docs:3,active_support:8}
 };
 
-const TREES=[
-  {id:'sv',titleFn:h=>"Service visits — "+h.sv_per_dvmday+" visits/DVM day vs. "+h.bench_sv_per_dvmday+" regional benchmark",subFn:h=>{const gap=((h.bench_sv_per_dvmday-h.sv_per_dvmday)/h.bench_sv_per_dvmday*100).toFixed(0);const w=gap>0?gap+"% below benchmark":Math.abs(gap)+"% above benchmark";const r=h.retention_rate<h.bench_retention?" Client retention ("+h.retention_rate+"%) is also below benchmark ("+h.bench_retention+"%), suggesting retention is a contributing factor.":"";return"Your hospital is "+w+" on service visits per DVM day in Q1 2026."+r+" Help us understand your situation.";},contextFn:null,q:"Is your appointment schedule typically full most days, or are slots going unfilled?",opts:[{val:'full',title:"Mostly full",sub:"We're busy — limited open slots, patients sometimes wait days"},{val:'open',title:"Open slots most days",sub:"We have availability but aren't filling the schedule consistently"}]},
-  {id:'nc',titleFn:h=>"New clients — "+h.nc_per_dd.toFixed(2)+" new clients/DVM day vs. "+h.bench_nc_per_dd.toFixed(2)+" regional benchmark",subFn:h=>{const gap=((h.bench_nc_per_dd-h.nc_per_dd)/h.bench_nc_per_dd*100).toFixed(0);const d=gap>0?gap+"% below benchmark":"at or above benchmark";return"Your new client rate is "+d+" in Q1 2026. Let's figure out whether the barrier is access or awareness.";},contextFn:h=>h.retention_rate>=h.bench_retention?"Your client retention ("+h.retention_rate+"%) is above the regional benchmark ("+h.bench_retention+"%), which suggests retention is healthy — focus on bringing in new clients.":"Your client retention ("+h.retention_rate+"%) is below benchmark ("+h.bench_retention+"%). Retention-focused tasks will be added to your service visits goal.",q:"When a new client contacts you for an appointment, can you typically get them in within a reasonable timeframe?",opts:[{val:'can_get_in',title:"Yes — we can usually accommodate new clients",sub:"Access isn't the barrier; new clients just aren't finding or choosing us"},{val:'long_wait',title:"No — new clients often face a long wait",sub:"We're turning people away or giving 2+ week wait times"}]},
-  {id:'hd',titleFn:h=>"Home delivery — "+h.hd_pct.toFixed(1)+"% of revenue vs. "+h.bench_hd_pct.toFixed(1)+"% regional benchmark",subFn:h=>{const gap=((h.bench_hd_pct-h.hd_pct)/h.bench_hd_pct*100).toFixed(0);const d=gap>0?gap+"% below benchmark":"at or above benchmark";return"Your HD shipped revenue was "+fmt$(h.hd_shipped_rev)+" in Q1 2026, "+d+". Tell us about your current checkout process.";},contextFn:null,q:"When a client checks out, is your team consistently offering home delivery and sending a checkout link?",opts:[{val:'inconsistent',title:"Not consistently — it depends on the team member",sub:"No standard process in place for every checkout"},{val:'consistent',title:"Yes — we do this regularly",sub:"We offer HD at checkout but conversion could be higher"}]},
-  {id:'mat',titleFn:h=>"Materials cost — "+h.materials_pct.toFixed(1)+"% of revenue vs. "+h.bench_materials_pct.toFixed(1)+"% benchmark ("+ppsDelta(h.materials_pct,h.bench_materials_pct)+")",subFn:h=>{const gap=(h.materials_pct-h.bench_materials_pct)/h.bench_materials_pct*100;if(gap<=5)return"Your materials cost is near the regional benchmark — a stretch goal here will keep things tight as you grow.";return"Your materials cost is "+ppsDelta(h.materials_pct,h.bench_materials_pct)+" vs. regional benchmark. The biggest driver is "+h.top_mat_label+" at "+h.top_mat_pct+"% vs. "+h.top_mat_bench+"% benchmark.";},contextFn:h=>{const gap=(h.materials_pct-h.bench_materials_pct)/h.bench_materials_pct*100;if(gap<=5)return null;return"Data shows your largest overage is in "+h.top_mat_label+" ("+h.top_mat_pct+"% vs. "+h.top_mat_bench+"% regional benchmark — "+ppsDelta(h.top_mat_pct,h.top_mat_bench)+"). This is the primary area to address.";},q:"Is this materials cost gap something your team is already aware of and actively working on?",opts:[{val:'new_info',title:"This is new information",sub:"We haven't been tracking this closely — recommend foundational controls"},{val:'aware',title:"Yes, we're already working on it",sub:"We have controls in place — show me advanced levers to tighten further"}]},
-  {id:'sup',titleFn:h=>"Support payroll — "+h.support_payroll_pct.toFixed(1)+"% of revenue vs. "+h.bench_support_payroll_pct.toFixed(1)+"% benchmark ("+ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+")",subFn:h=>{const gap=h.support_payroll_pct-h.bench_support_payroll_pct;const ot=h.ot_pct_payroll>3?" Notably, "+h.ot_pct_payroll.toFixed(1)+"% of your support payroll is overtime.":"";if(gap<=-1)return"Your support payroll is "+Math.abs(gap).toFixed(1)+" pps below the regional benchmark — strong efficiency. A stretch goal keeps that discipline as you grow.";return"Your support payroll is "+ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+" vs. regional benchmark."+ot+" Help us understand the root cause.";},contextFn:h=>{const gap=h.support_payroll_pct-h.bench_support_payroll_pct;if(gap<=-1)return null;return"Staff hours per service visit: "+h.staff_hours_per_sv+" vs. "+h.bench_staff_hours_per_sv+" regional benchmark. OT as % of support payroll: "+h.ot_pct_payroll.toFixed(1)+"%.";},q:"What best describes your current support staffing situation?",opts:h=>{const base=[{val:'ot',title:"Fully staffed but high overtime",sub:"We have the headcount but OT costs are creeping up"},{val:'volume',title:"Fully staffed, high base cost relative to volume",sub:"We may be overstaffed relative to patient volume"},{val:'understaffed',title:"We have open roles — understaffed right now",sub:"We're short-handed and it's affecting operations"}];if(h.support_payroll_pct<h.bench_support_payroll_pct)base.push({val:'ok',title:"Payroll is well-managed — no concerns",sub:"We're below benchmark and things are running smoothly"});return base;}}
-];
+/* ─── HELPERS ───────────────────────────────────────── */
+const fmt$=n=>'$'+n.toLocaleString('en-US',{maximumFractionDigits:0});
+const fmtYoY=n=>(n>=0?'+':'')+n.toFixed(1)+'%';
+const ppsDelta=(a,b)=>{const d=a-b;return(d>0?'+':'')+d.toFixed(1)+' pps'};
+const gapCls=(good)=>good?'gap-good':'gap-bad';
 
-function computeGoalOrder(h,answers){
-  answers.retention_below=h.retention_rate<h.bench_retention;
-  const svGap=(h.bench_sv_per_dvmday-h.sv_per_dvmday)/h.bench_sv_per_dvmday;
-  const matGap=(h.materials_pct-h.bench_materials_pct)/h.bench_materials_pct;
-  const hdGap=(h.bench_hd_pct-h.hd_pct)/h.bench_hd_pct;
-  const ncGap=(h.bench_nc_per_dd-h.nc_per_dd)/h.bench_nc_per_dd;
-  const supGap=(h.support_payroll_pct-h.bench_support_payroll_pct)/h.bench_support_payroll_pct;
-  const supKey=answers.sup==='ok'?'support_maintain':answers.sup==='ot'?'support_ot':answers.sup==='volume'?'support_volume':'support_hire';
-  const goals=[
-    {key:answers.sv==='full'?'sv_capacity':'sv_demand',priority:Math.max(svGap>-0.05?svGap:0.05,0.02),gap:svGap,stretch:svGap<=-0.05},
-    {key:answers.nc==='can_get_in'?'new_clients_mktg':'new_clients_access',priority:Math.max(ncGap>-0.05?ncGap:0.05,0.02),gap:ncGap,stretch:ncGap<=-0.05},
-    {key:answers.hd==='inconsistent'?'hd_sop':'hd_optimize',priority:Math.max(hdGap>-0.05?hdGap:0.05,0.02),gap:hdGap,stretch:hdGap<=-0.05},
-    {key:answers.mat==='new_info'?'materials_aware':'materials_advanced',priority:Math.max(matGap>0.05?matGap:0.02,0.02),gap:matGap,stretch:matGap<=0.05},
-    {key:supKey,priority:Math.max(supGap>0.05&&answers.sup!=='ok'?supGap:0.01,0.01),gap:supGap,stretch:supGap<=0.05||answers.sup==='ok'},
-    {key:'nps',priority:h.nps!==null&&h.nps<h.bench_nps?0.15:0.03,gap:h.bench_nps?(h.bench_nps-(h.nps||h.bench_nps))/h.bench_nps:0,stretch:h.nps===null||h.nps>=h.bench_nps}
-  ];
-  goals.sort((a,b)=>b.priority-a.priority);
-  return goals.slice(0,5);
+function pkpi(label,val,delta,good){
+  const cls=delta===null?'gap-neu':good?'gap-good':'gap-bad';
+  return `<div class="pkpi"><div class="pkpi-label">${label}</div><div class="pkpi-val">${val}</div>${delta!==null?`<div class="pkpi-delta ${cls}">${delta}</div>`:''}</div>`;
 }
 
-let S={hosp:null,treeIdx:0,answers:{},goals:[],selected:new Set(),preparer:'',quarter:'Q2 2026'};
-
-function checkStep1(){
-  const hid=document.getElementById('hosp-sel').value;
-  S.hosp=hid?HOSPITALS[parseInt(hid)]:null;
-  S.preparer=document.getElementById('preparer-name').value.trim();
-  S.quarter=document.getElementById('quarter-sel').value;
-  document.getElementById('btn-s1-next').disabled=!(hid&&S.preparer&&S.quarter);
+/* ─── KPI AREAS DEFINITION ──────────────────────────── */
+// Each area: id, label, gapFn (returns + = bad for 'lower is better', - = good; or opposite)
+// gapScore: higher = more urgent (used for sorting)
+function getAreas(h){
+  return [
+    {
+      id:'sv',label:'Service Visits',
+      badge:'b-sv',
+      val:h.sv_per_dvmday.toFixed(1),
+      valLabel:'SV / DVM day',
+      delta:ppsDelta(h.sv_per_dvmday,h.bench_sv_per_dvmday),
+      deltaGood:h.sv_per_dvmday>=h.bench_sv_per_dvmday,
+      bench:'Bench: '+h.bench_sv_per_dvmday.toFixed(1),
+      gapScore:(h.bench_sv_per_dvmday-h.sv_per_dvmday)/h.bench_sv_per_dvmday
+    },
+    {
+      id:'nc',label:'New Clients',
+      badge:'b-nc',
+      val:h.nc_per_dd.toFixed(2),
+      valLabel:'New clients / DVM day',
+      delta:ppsDelta(h.nc_per_dd,h.bench_nc_per_dd),
+      deltaGood:h.nc_per_dd>=h.bench_nc_per_dd,
+      bench:'Bench: '+h.bench_nc_per_dd.toFixed(2),
+      gapScore:(h.bench_nc_per_dd-h.nc_per_dd)/h.bench_nc_per_dd
+    },
+    {
+      id:'hd',label:'Home Delivery',
+      badge:'b-hd',
+      val:fmt$(h.hd_shipped_rev),
+      valLabel:'HD shipped revenue',
+      delta:ppsDelta(h.hd_pct,h.bench_hd_pct)+' vs bench',
+      deltaGood:h.hd_pct>=h.bench_hd_pct,
+      bench:'HD %: '+h.hd_pct.toFixed(1)+'% · Bench: '+h.bench_hd_pct.toFixed(1)+'%',
+      gapScore:(h.bench_hd_pct-h.hd_pct)/h.bench_hd_pct
+    },
+    {
+      id:'mat',label:'Materials Cost',
+      badge:'b-mat',
+      val:h.materials_pct.toFixed(1)+'%',
+      valLabel:'Materials % of revenue',
+      delta:ppsDelta(h.materials_pct,h.bench_materials_pct)+' vs bench',
+      deltaGood:h.materials_pct<=h.bench_materials_pct,
+      bench:'Bench: '+h.bench_materials_pct.toFixed(1)+'%',
+      gapScore:(h.materials_pct-h.bench_materials_pct)/h.bench_materials_pct
+    },
+    {
+      id:'sup',label:'Support Payroll',
+      badge:'b-sup',
+      val:h.support_payroll_pct.toFixed(1)+'%',
+      valLabel:'Support payroll % of revenue',
+      delta:ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+' vs bench',
+      deltaGood:h.support_payroll_pct<=h.bench_support_payroll_pct,
+      bench:'Bench: '+h.bench_support_payroll_pct.toFixed(1)+'%',
+      gapScore:(h.support_payroll_pct-h.bench_support_payroll_pct)/h.bench_support_payroll_pct
+    },
+    {
+      id:'nps',label:'NPS',
+      badge:'b-nps',
+      val:h.nps!==null?h.nps.toFixed(0):'N/A',
+      valLabel:'NPS score',
+      delta:h.nps!==null?ppsDelta(h.nps,h.bench_nps)+' vs bench':null,
+      deltaGood:h.nps!==null&&h.nps>=h.bench_nps,
+      bench:'Bench: '+(h.bench_nps?h.bench_nps.toFixed(0):'N/A'),
+      gapScore:h.nps!==null?(h.bench_nps-h.nps)/h.bench_nps:0
+    }
+  ].sort((a,b)=>b.gapScore-a.gapScore);
 }
 
-function setProgress(step,pct){
-  const labels=['Step 1 of 4 — Select hospital','Step 2 of 4 — Q1 2026 performance data','Step 3 of 4 — Guided questions','Step 4 of 4 — Build action plan'];
-  document.getElementById('prog-label').textContent=labels[step-1]||labels[3];
-  document.getElementById('prog-pct').textContent=pct+'%';
-  document.getElementById('prog-fill').style.width=pct+'%';
+/* ─── DECISION TREES PER AREA ───────────────────────── */
+const TREES={
+  sv:[
+    {id:'sv_q1',
+      titleFn:h=>"Service visits — "+h.sv_per_dvmday+" SV/DVM day vs. "+h.bench_sv_per_dvmday+" regional benchmark",
+      subFn:h=>{const gap=((h.bench_sv_per_dvmday-h.sv_per_dvmday)/h.bench_sv_per_dvmday*100).toFixed(0);const dir=gap>0?gap+"% below benchmark":Math.abs(gap)+"% above benchmark";const ret=h.retention_rate<h.bench_retention?" Client retention ("+h.retention_rate+"%) is also below benchmark ("+h.bench_retention+"%).":"";return"Your hospital is "+dir+" on service visits per DVM day."+ret+" Help us understand your situation.";},
+      contextFn:null,
+      q:"Is your appointment schedule typically full most days, or are slots going unfilled?",
+      opts:[{val:'full',title:"Mostly full",sub:"We're busy — limited open slots, patients sometimes wait days"},{val:'open',title:"Open slots most days",sub:"We have availability but aren't filling the schedule consistently"}]
+    }
+  ],
+  nc:[
+    {id:'nc_q1',
+      titleFn:h=>"New clients — "+h.nc_per_dd.toFixed(2)+" new clients/DVM day vs. "+h.bench_nc_per_dd.toFixed(2)+" regional benchmark",
+      subFn:h=>{const gap=((h.bench_nc_per_dd-h.nc_per_dd)/h.bench_nc_per_dd*100).toFixed(0);const dir=gap>0?gap+"% below benchmark":"at or above benchmark";return"Your new client rate is "+dir+" in Q1 2026. Let's figure out whether the barrier is access or awareness.";},
+      contextFn:h=>h.retention_rate>=h.bench_retention?"Your client retention ("+h.retention_rate+"%) is above the regional benchmark ("+h.bench_retention+"%) — retention is healthy. The focus should be on attracting new clients.":"Your client retention ("+h.retention_rate+"%) is below benchmark ("+h.bench_retention+"%). Retention-focused tasks will be added to your service visits goal if you set one.",
+      q:"When a new client contacts you, can you typically get them in within a reasonable timeframe?",
+      opts:[{val:'can_get_in',title:"Yes — we can usually accommodate new clients",sub:"Access isn't the barrier; new clients just aren't finding us"},{val:'long_wait',title:"No — new clients often face a long wait",sub:"We're turning people away or giving 2+ week wait times"}]
+    }
+  ],
+  hd:[
+    {id:'hd_q1',
+      titleFn:h=>"Home delivery — "+fmt$(h.hd_shipped_rev)+" shipped Q1 · "+h.hd_pct.toFixed(1)+"% of revenue vs. "+h.bench_hd_pct.toFixed(1)+"% benchmark",
+      subFn:h=>{const gap=((h.bench_hd_pct-h.hd_pct)/h.bench_hd_pct*100).toFixed(0);const dir=gap>0?gap+"% below benchmark":"at or above benchmark";return"Your HD revenue is "+dir+". Tell us about your current checkout process.";},
+      contextFn:null,
+      q:"When a client checks out, is your team consistently offering home delivery and sending a checkout link?",
+      opts:[{val:'inconsistent',title:"Not consistently — it depends on the team member",sub:"No standard process in place for every checkout"},{val:'consistent',title:"Yes — we do this regularly",sub:"We offer HD at checkout but conversion could be higher"}]
+    }
+  ],
+  mat:[
+    {id:'mat_q1',
+      titleFn:h=>"Materials — "+h.materials_pct.toFixed(1)+"% of revenue vs. "+h.bench_materials_pct.toFixed(1)+"% benchmark ("+ppsDelta(h.materials_pct,h.bench_materials_pct)+")",
+      subFn:h=>{const gap=(h.materials_pct-h.bench_materials_pct)/h.bench_materials_pct*100;if(gap<=5)return"Your materials cost is near benchmark. A stretch goal here keeps things disciplined as you grow.";return"Your materials are "+ppsDelta(h.materials_pct,h.bench_materials_pct)+" vs. benchmark. The biggest driver is "+h.top_mat_label+" at "+h.top_mat_pct+"% vs. "+h.top_mat_bench+"% benchmark.";},
+      contextFn:h=>{const gap=(h.materials_pct-h.bench_materials_pct)/h.bench_materials_pct*100;if(gap<=5)return null;return"Largest overage: "+h.top_mat_label+" at "+h.top_mat_pct+"% of revenue vs. "+h.top_mat_bench+"% regional benchmark ("+ppsDelta(h.top_mat_pct,h.top_mat_bench)+"). This is the primary area to address.";},
+      q:"Is this materials cost gap something your team is already aware of and working on?",
+      opts:[{val:'new_info',title:"This is new information",sub:"We haven't been tracking this closely — recommend foundational controls"},{val:'aware',title:"Yes, we're already working on it",sub:"We have controls in place — show me advanced levers"}]
+    }
+  ],
+  sup:[
+    {id:'sup_q1',
+      titleFn:h=>"Support payroll — "+h.support_payroll_pct.toFixed(1)+"% of revenue vs. "+h.bench_support_payroll_pct.toFixed(1)+"% benchmark ("+ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+")",
+      subFn:h=>{const gap=h.support_payroll_pct-h.bench_support_payroll_pct;const ot=h.ot_pct_payroll>3?" OT is "+h.ot_pct_payroll.toFixed(1)+"% of your support payroll.":"";if(gap<=-1)return"Your support payroll is "+Math.abs(gap).toFixed(1)+" pps below benchmark — strong efficiency. A stretch goal maintains that discipline.";return"Your support payroll is "+ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+" vs. benchmark."+ot+" Help us understand the root cause.";},
+      contextFn:h=>{const gap=h.support_payroll_pct-h.bench_support_payroll_pct;if(gap<=-1)return null;return"Staff hours per SV: "+h.staff_hours_per_sv+" vs. "+h.bench_staff_hours_per_sv+" benchmark. OT as % of support payroll: "+h.ot_pct_payroll.toFixed(1)+"%.";},
+      q:"What best describes your current support staffing situation?",
+      opts:h=>{const base=[{val:'ot',title:"Fully staffed but high overtime",sub:"We have the headcount but OT is creeping up"},{val:'volume',title:"Fully staffed, high base cost relative to volume",sub:"We may be overstaffed relative to patient volume"},{val:'understaffed',title:"We have open roles — understaffed right now",sub:"We're short-handed and it's affecting operations"}];if(h.support_payroll_pct<h.bench_support_payroll_pct)base.push({val:'ok',title:"Payroll is well-managed — no concerns",sub:"We're below benchmark and running efficiently"});return base;}
+    }
+  ],
+  nps:[
+    {id:'nps_q1',
+      titleFn:h=>"NPS — "+(h.nps!==null?h.nps.toFixed(0):'N/A')+" vs. "+(h.bench_nps?h.bench_nps.toFixed(0):'N/A')+" regional benchmark",
+      subFn:h=>h.nps!==null&&h.nps<h.bench_nps?"Your NPS is below the regional benchmark. Let's identify where client experience can improve.":"Your NPS is at or above benchmark — great work. Let's build on it.",
+      contextFn:null,
+      q:"Where do you think the biggest client experience opportunity is right now?",
+      opts:[{val:'followup',title:"Post-visit follow-up and communication",sub:"Clients don't feel heard or reconnected after their visit"},{val:'wait',title:"Wait times and in-clinic experience",sub:"Lobby waits and flow are causing friction"},{val:'team',title:"Team morale and consistency",sub:"Staff engagement is affecting the client experience"}]
+    }
+  ]
+};
+
+/* ─── GOAL DEFINITIONS ─────────────────────────────── */
+function buildGoal(areaId, answers, h){
+  const a=answers;
+  if(areaId==='sv'){
+    const full=a.sv_q1==='full';
+    const retBelow=h.retention_rate<h.bench_retention;
+    const target=Math.round(h.bench_sv_per_dvmday*1.05*10)/10;
+    const tasks=full?[
+      {t:"Extend operating hours to create additional appointment slots"},
+      {t:"Reduce schedule blocking — target 85%+ of slots available"},
+      {t:"Accept drop-off appointments to increase daily throughput"},
+      {t:"Accept walk-in appointments during off-peak hours"},
+      ...(retBelow?[{t:"Implement recall and reactivation campaigns to improve retention"},{t:"Increase wellness visit frequency through proactive reminders"}]:[]),
+      {t:"Target: SV/DVM day from "+h.sv_per_dvmday+" → "+target,target:true}
+    ]:[
+      ...(retBelow?[{t:"Launch recall and reactivation program to recover lapsed clients"},{t:"Increase wellness visit frequency through proactive reminders"}]:[]),
+      {t:"Implement PetDesk and Vetstoria best practices for online booking"},
+      {t:"Implement forward booking at every appointment"},
+      {t:"Enable digital marketing to grow local awareness"},
+      {t:"Launch referral promotion program"},
+      {t:"Use Tail-o-Phone: set daily outbound call target"},
+      {t:"Target: SV/DVM day from "+h.sv_per_dvmday+" → "+target,target:true}
+    ];
+    return{title:"Grow service visits — "+(full?"expand capacity":"increase demand"),badge:"b-sv",badgeLabel:"Service visits",weight:full?8:6,target:"SV/DVM day → "+target,
+      kpis:[pkpi('SV / DVM day',h.sv_per_dvmday.toFixed(1),ppsDelta(h.sv_per_dvmday,h.bench_sv_per_dvmday)+' vs bench',h.sv_per_dvmday>=h.bench_sv_per_dvmday),pkpi('SV YoY',fmtYoY(h.sv_yoy),fmtYoY(h.sv_yoy),h.sv_yoy>=0),pkpi('Retention',h.retention_rate+'%',ppsDelta(h.retention_rate,h.bench_retention)+' vs bench',h.retention_rate>=h.bench_retention)],tasks};
+  }
+  if(areaId==='nc'){
+    const access=a.nc_q1==='long_wait';
+    const target=Math.round(h.bench_nc_per_dd*1.1*100)/100;
+    const tasks=access?[
+      {t:"Extend hours or add slots to accommodate new client demand"},
+      {t:"Accept drop-off and walk-in appointments for new clients"},
+      {t:"Enable digital marketing to capture existing local demand"},
+      {t:"Launch referral program to leverage loyal client base"},
+      {t:"Target: new clients/DVM day from "+h.nc_per_dd.toFixed(2)+" → "+target,target:true}
+    ]:[
+      {t:"Enable digital marketing — Google, social, local SEO"},
+      {t:"Increase organic social media posts (target 3+ per week)"},
+      {t:"Launch a structured referral incentive program"},
+      {t:"Respond to 100% of positive online reviews organically"},
+      {t:"Respond to 100% of negative online reviews with a resolution path"},
+      {t:"Implement PetDesk / Vetstoria best practices to reduce new client friction"},
+      {t:"Target: new clients/DVM day from "+h.nc_per_dd.toFixed(2)+" → "+target,target:true}
+    ];
+    return{title:"Grow new client acquisition"+(access?" — remove barriers":""),badge:"b-nc",badgeLabel:"New clients",weight:access?6:4,target:"New clients/DVM day → "+target,
+      kpis:[pkpi('New clients / DD',h.nc_per_dd.toFixed(2),ppsDelta(h.nc_per_dd,h.bench_nc_per_dd)+' vs bench',h.nc_per_dd>=h.bench_nc_per_dd),pkpi('New client YoY',fmtYoY(h.nc_yoy),'bench: '+fmtYoY(h.bench_nc_yoy),h.nc_yoy>=h.bench_nc_yoy),pkpi('New client rate',h.new_client_rate+'%',ppsDelta(h.new_client_rate,h.bench_new_client_rate)+' vs bench',h.new_client_rate>=h.bench_new_client_rate)],tasks};
+  }
+  if(areaId==='hd'){
+    const sop=a.hd_q1==='inconsistent';
+    const target=sop?Math.round(h.bench_hd_pct*0.75*10)/10:Math.round(h.bench_hd_pct*1.05*10)/10;
+    const tasks=sop?[
+      {t:"Implement checkout link SOP — send HD link at every checkout"},
+      {t:"Set a daily checkout link target for the team"},
+      {t:"Train team on home delivery recommendation script"},
+      {t:"Promote auto-ship at point of recommendation"},
+      {t:"Ensure in-practice client awareness (signage, messaging)"},
+      {t:"Target: HD revenue from "+h.hd_pct.toFixed(1)+"% → "+target+"% of revenue",target:true}
+    ]:[
+      {t:"Review checkout link % of service visits and set improvement target"},
+      {t:"Increase auto-ship % of total HD orders"},
+      {t:"Recommend standard-of-care products at checkout for HD"},
+      {t:"Audit HD penetration by DVM to identify coaching opportunities"},
+      {t:"Target: HD revenue from "+h.hd_pct.toFixed(1)+"% → "+target+"% of revenue",target:true}
+    ];
+    return{title:"Home delivery — "+(sop?"build the platform":"optimize conversion"),badge:"b-hd",badgeLabel:"Home delivery",weight:sop?6:4,target:"HD revenue → "+target+"% of revenue",
+      kpis:[pkpi('HD shipped rev',fmt$(h.hd_shipped_rev),null,null),pkpi('HD % of rev',h.hd_pct.toFixed(1)+'%',ppsDelta(h.hd_pct,h.bench_hd_pct)+' vs bench',h.hd_pct>=h.bench_hd_pct),pkpi('HD YoY',(h.hd_yoy>=0?'+':'')+h.hd_yoy.toFixed(1)+' pps',null,null)],tasks};
+  }
+  if(areaId==='mat'){
+    const newInfo=a.mat_q1==='new_info';
+    const target=newInfo?Math.round(h.bench_materials_pct*1.05*10)/10:Math.round(h.bench_materials_pct*10)/10;
+    const tasks=newInfo?[
+      {t:"Implement a consistent weekly supply ordering schedule"},
+      {t:"Set weekly allocation targets by category"},
+      {t:"Review "+h.top_mat_label+" spend — "+h.top_mat_pct+"% vs. "+h.top_mat_bench+"% benchmark"},
+      {t:"Track supplies ordering vs. weekly allocation weekly"},
+      {t:"Audit medical supplies % of revenue monthly"},
+      {t:"Target: materials from "+h.materials_pct.toFixed(1)+"% → "+target+"% of revenue",target:true}
+    ]:[
+      {t:"Focus on "+h.top_mat_label+" — "+h.top_mat_pct+"% vs. "+h.top_mat_bench+"% regional benchmark"},
+      {t:"Tighten ordering cadence and review vendor pricing"},
+      {t:"Set allocation targets and track weekly variance"},
+      {t:"Review supplies ordering vs. weekly allocation"},
+      {t:"Target: materials from "+h.materials_pct.toFixed(1)+"% → "+target+"% of revenue",target:true}
+    ];
+    return{title:"Reduce materials cost"+(newInfo?"":" — tighten controls"),badge:"b-mat",badgeLabel:"Materials %",weight:newInfo?6:4,target:"Materials → "+target+"% of revenue",
+      kpis:[pkpi('Materials %',h.materials_pct.toFixed(1)+'%',ppsDelta(h.materials_pct,h.bench_materials_pct)+' vs bench',h.materials_pct<=h.bench_materials_pct),pkpi('Top driver',h.top_mat_label,h.top_mat_pct+'% vs '+h.top_mat_bench+'% bench',h.top_mat_pct<=h.top_mat_bench),pkpi('Benchmark',h.bench_materials_pct.toFixed(1)+'%','regional median',null)],tasks};
+  }
+  if(areaId==='sup'){
+    const ans=a.sup_q1;
+    let title,weight,tasks;
+    if(ans==='ok'){
+      title="Maintain support staffing efficiency";weight=2;
+      tasks=[{t:"Continue monitoring worked hours per service visit monthly"},{t:"Maintain scheduling discipline as visit volume grows"},{t:"Review staffing levels if service visit volume increases >10%"},{t:"Target: maintain support payroll below "+Math.round(h.bench_support_payroll_pct*10)/10+"% of revenue",target:true}];
+    }else if(ans==='ot'){
+      title="Optimize support staff scheduling";weight=6;
+      tasks=[{t:"Audit overtime hours by role — OT currently "+h.ot_pct_payroll.toFixed(1)+"% of support payroll"},{t:"Implement scheduling optimization aligned to appointment volume"},{t:"Set OT % of revenue target and review weekly"},{t:"Track worked hours per SV ("+h.staff_hours_per_sv+" vs. "+h.bench_staff_hours_per_sv+" benchmark)"},{t:"Target: support payroll from "+h.support_payroll_pct.toFixed(1)+"% → "+Math.round(h.bench_support_payroll_pct*10)/10+"% of revenue",target:true}];
+    }else if(ans==='volume'){
+      title="Align support staffing to patient volume";weight=6;
+      tasks=[{t:"Review worked hours per SV vs. benchmark ("+h.staff_hours_per_sv+" vs. "+h.bench_staff_hours_per_sv+")"},{t:"Align shift scheduling to appointment volume patterns"},{t:"Review support staff cost per service visit monthly"},{t:"Set support payroll % of revenue target"},{t:"Target: support payroll from "+h.support_payroll_pct.toFixed(1)+"% → "+Math.round(h.bench_support_payroll_pct*10)/10+"% of revenue",target:true}];
+    }else{
+      title="Fill open support staff roles";weight=7;
+      tasks=[{t:"Prioritize open support role hiring to relieve team strain"},{t:"Track worked hours per SV weekly during hiring process"},{t:"Partner with HR on sourcing and onboarding pipeline"},{t:"Set interim scheduling adjustments until fully staffed"}];
+    }
+    const targetTask=tasks.find(t=>t.target);
+    return{title,badge:"b-sup",badgeLabel:"Support payroll",weight,target:targetTask?targetTask.t:null,
+      kpis:[pkpi('Support payroll %',h.support_payroll_pct.toFixed(1)+'%',ppsDelta(h.support_payroll_pct,h.bench_support_payroll_pct)+' vs bench',h.support_payroll_pct<=h.bench_support_payroll_pct),pkpi('OT % of payroll',h.ot_pct_payroll.toFixed(1)+'%',null,null),pkpi('Hrs / SV',h.staff_hours_per_sv?h.staff_hours_per_sv.toFixed(2):'—',h.staff_hours_per_sv?ppsDelta(h.staff_hours_per_sv,h.bench_staff_hours_per_sv)+' vs bench':null,h.staff_hours_per_sv<=h.bench_staff_hours_per_sv)],tasks};
+  }
+  if(areaId==='nps'){
+    const isBelow=h.nps!==null&&h.nps<h.bench_nps;
+    const targetVal=isBelow?Math.round(h.bench_nps*1.05):Math.round((h.nps||h.bench_nps)*1.03);
+    const tasks=[
+      {t:"Implement structured post-visit follow-up (text or email within 24 hrs)"},
+      {t:"Review and reduce lobby wait times"},
+      {t:"Launch a team recognition program to improve staff morale"},
+      {t:"Respond to 100% of online reviews"},
+      {t:"Target: NPS "+(isBelow?"from "+h.nps.toFixed(0)+" → "+targetVal:"maintain above "+(h.bench_nps?Math.round(h.bench_nps):'benchmark')+" and grow to "+targetVal),target:true}
+    ];
+    return{title:"Improve client experience and NPS",badge:"b-nps",badgeLabel:"NPS",weight:3,target:"NPS → "+targetVal,
+      kpis:[pkpi('NPS score',h.nps!==null?h.nps.toFixed(0):'N/A',h.nps!==null?ppsDelta(h.nps,h.bench_nps)+' vs bench':null,h.nps!==null&&h.nps>=h.bench_nps),pkpi('Regional bench',h.bench_nps!==null?h.bench_nps.toFixed(0):'N/A',null,null),pkpi('Retention',h.retention_rate+'%',ppsDelta(h.retention_rate,h.bench_retention)+' vs bench',h.retention_rate>=h.bench_retention)],tasks};
+  }
 }
 
+/* ─── STATE ─────────────────────────────────────────── */
+let S={hosp:null,preparer:'',quarter:'Q2 2026',activeArea:null,treeIdx:0,treeAnswers:{},plan:[]};
+
+/* ─── NAVIGATION ────────────────────────────────────── */
 function showView(id){
-  ['view-select','view-data','view-tree','view-goals','view-summary'].forEach(v=>{const el=document.getElementById(v);el.classList.add('hidden');el.classList.remove('fade-in');});
+  ['view-select','view-perf','view-tree','view-proposal','view-plan'].forEach(v=>{
+    const el=document.getElementById(v);el.classList.add('hidden');el.classList.remove('fade-in');
+  });
   const el=document.getElementById(id);el.classList.remove('hidden');
   requestAnimationFrame(()=>el.classList.add('fade-in'));
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-function goSelect(){showView('view-select');setProgress(1,0);}
-
-function goData(){
-  const h=S.hosp;
-  document.getElementById('data-title').textContent=h.name;
-  document.getElementById('data-sub').textContent=h.region+' · '+h.active_docs+' active DVMs · '+h.active_support+' support staff · Q1 2026 results';
-  const revGood=h.rev_yoy>=h.bench_rev_yoy;
-  document.getElementById('rev-banner').innerHTML=
-    '<div class="rev-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1v14M5 11l3 3 3-3M5 5L8 2l3 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'+
-    '<div class="rev-text"><strong>North star: '+fmt$(h.q1_revenue)+' Q1 2026 revenue</strong> — <span class="'+(revGood?'gap-good':'gap-bad')+'">'+fmtYoY(h.rev_yoy)+' YoY '+(revGood?'(above':'(below')+' regional benchmark of '+fmtYoY(h.bench_rev_yoy)+')</span>. Goals below are designed to keep revenue growing.</div>';
-  const metrics=[
-    {l:'SV / DVM day',v:h.sv_per_dvmday.toFixed(1),b:h.bench_sv_per_dvmday.toFixed(1),d:h.sv_per_dvmday-h.bench_sv_per_dvmday,hb:true,pps:false},
-    {l:'Client retention',v:h.retention_rate+'%',b:h.bench_retention+'%',d:h.retention_rate-h.bench_retention,hb:true,pps:true},
-    {l:'New clients / DD',v:h.nc_per_dd.toFixed(2),b:h.bench_nc_per_dd.toFixed(2),d:h.nc_per_dd-h.bench_nc_per_dd,hb:true,pps:false},
-    {l:'HD shipped rev',v:fmt$(h.hd_shipped_rev),b:h.bench_hd_pct.toFixed(1)+'%',d:h.hd_pct-h.bench_hd_pct,hb:true,pps:true},
-    {l:'Materials %',v:h.materials_pct.toFixed(1)+'%',b:h.bench_materials_pct.toFixed(1)+'%',d:h.materials_pct-h.bench_materials_pct,hb:false,pps:true},
-    {l:'Support payroll %',v:h.support_payroll_pct.toFixed(1)+'%',b:h.bench_support_payroll_pct.toFixed(1)+'%',d:h.support_payroll_pct-h.bench_support_payroll_pct,hb:false,pps:true},
-    {l:'NPS',v:h.nps!==null?h.nps.toFixed(0):'N/A',b:h.bench_nps.toFixed(0),d:h.nps!==null?h.nps-h.bench_nps:0,hb:true,pps:false}
-  ];
-  const mg=document.getElementById('metric-grid');mg.innerHTML='';
-  metrics.forEach(m=>{
-    const isGood=m.hb?m.d>=0:m.d<=0;
-    const cls=Math.abs(m.d)<0.3?'gap-neu':isGood?'gap-good':'gap-bad';
-    const deltaStr=m.pps?ppsDelta(parseFloat(m.v),parseFloat(m.b)):(m.d>=0?'+':'')+m.d.toFixed(1);
-    mg.innerHTML+='<div class="m-card"><div class="m-label">'+m.l+'</div><div class="m-val">'+m.v+'</div><div class="m-bench '+cls+'">'+deltaStr+' vs. '+m.b+' bench</div></div>';
-  });
-  showView('view-data');setProgress(2,25);
+function setProgress(label,pct){
+  document.getElementById('prog-label').textContent=label;
+  document.getElementById('prog-pct').textContent=pct+'%';
+  document.getElementById('prog-fill').style.width=pct+'%';
 }
 
-function startTree(){S.treeIdx=0;S.answers={};renderTree();showView('view-tree');setProgress(3,50);}
-function goTree(){renderTree();showView('view-tree');setProgress(3,50);}
+/* ─── STEP 1: SELECT ────────────────────────────────── */
+function checkS1(){
+  const hid=document.getElementById('hosp-sel').value;
+  S.hosp=hid?HOSPITALS[parseInt(hid)]:null;
+  S.preparer=document.getElementById('preparer').value.trim();
+  S.quarter=document.getElementById('quarter-sel').value;
+  document.getElementById('btn-s1').disabled=!(hid&&S.preparer&&S.quarter);
+}
 
+function goSelect(){showView('view-select');setProgress('Step 1 of 3 — Select hospital',0);}
+
+/* ─── STEP 2: PERFORMANCE ───────────────────────────── */
+function goPerf(){
+  const h=S.hosp;
+  document.getElementById('perf-title').textContent=h.name;
+  document.getElementById('perf-sub').textContent=h.region+' · '+h.active_docs+' active DVMs · '+h.active_support+' support staff · Q1 2026 results';
+
+  // Revenue banner
+  const revGood=h.rev_yoy>=h.bench_rev_yoy;
+  const banner=document.getElementById('rev-banner');
+  banner.className='rev-banner '+(revGood?'good':'bad');
+  banner.innerHTML=`<div class="rev-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1v14M5 11l3 3 3-3M5 5L8 2l3 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="rev-text"><strong>North star: ${fmt$(h.q1_revenue)} Q1 2026 revenue</strong> — <span>${fmtYoY(h.rev_yoy)} YoY ${revGood?'(above':'(below'} regional benchmark of ${fmtYoY(h.bench_rev_yoy)})</span>. Goals below are designed to keep revenue growing.</div>`;
+
+  // KPI grid sorted by gap severity
+  const areas=getAreas(h);
+  const grid=document.getElementById('kpi-grid');
+  grid.innerHTML='';
+  areas.forEach(area=>{
+    const hasGoal=S.plan.some(g=>g.areaId===area.id);
+    const isGap=area.gapScore>0.05;
+    const flagText=hasGoal?'Goal set':isGap?'Gap identified':'On track';
+    const flagCls=hasGoal?'flag-goal':isGap?'flag-gap':'flag-ok';
+    const deltaHtml=area.delta?`<div class="kpi-area-delta ${gapCls(area.deltaGood)}">${area.delta}</div>`:'';
+    grid.innerHTML+=`
+      <div class="kpi-area${hasGoal?' has-goal':''}" onclick="clickArea('${area.id}')">
+        <div class="kpi-area-top">
+          <div class="kpi-area-label">${area.label}</div>
+          <div class="kpi-area-flag ${flagCls}">${flagText}</div>
+        </div>
+        <div class="kpi-area-val">${area.val}</div>
+        <div style="font-size:11px;color:var(--text-3);margin-bottom:2px">${area.valLabel}</div>
+        ${deltaHtml}
+        <div class="kpi-area-bench">${area.bench}</div>
+        ${hasGoal?`<div class="goal-indicator">✓ Added to plan</div>`:`<div class="kpi-area-add">Set a goal →</div>`}
+      </div>`;
+  });
+
+  // Show/hide view plan button
+  document.getElementById('btn-view-plan').style.display=S.plan.length>0?'':'none';
+  showView('view-perf');
+  setProgress('Step 2 of 3 — Review performance & select goals',33);
+}
+
+/* ─── CLICK AREA → START TREE ───────────────────────── */
+function clickArea(areaId){
+  S.activeArea=areaId;
+  S.treeIdx=0;
+  S.treeAnswers={};
+  renderTree();
+  showView('view-tree');
+  setProgress('Step 2 of 3 — '+areaLabel(areaId)+' goal',50);
+}
+
+function areaLabel(id){return{sv:'Service visits',nc:'New clients',hd:'Home delivery',mat:'Materials cost',sup:'Support payroll',nps:'NPS'}[id]||id;}
+
+/* ─── DECISION TREE ─────────────────────────────────── */
 function renderTree(){
-  const h=S.hosp;const t=TREES[S.treeIdx];
-  document.getElementById('tree-eyebrow').textContent='Question '+(S.treeIdx+1)+' of '+TREES.length;
-  document.getElementById('tree-title').textContent=t.titleFn(h);
-  document.getElementById('tree-sub').textContent=t.subFn(h);
-  const ctx=t.contextFn?t.contextFn(h):null;
+  const h=S.hosp;
+  const tree=TREES[S.activeArea];
+  const step=tree[S.treeIdx];
+  document.getElementById('tree-eyebrow').textContent=areaLabel(S.activeArea)+' · Question '+(S.treeIdx+1)+' of '+tree.length;
+  document.getElementById('tree-title').textContent=step.titleFn(h);
+  document.getElementById('tree-sub').textContent=step.subFn(h);
+  const ctx=step.contextFn?step.contextFn(h):null;
   const ctxEl=document.getElementById('tree-context');
   if(ctx){ctxEl.textContent=ctx;ctxEl.classList.remove('hidden');}else{ctxEl.classList.add('hidden');}
-  const opts=document.getElementById('tree-options');opts.innerHTML='';
-  const cur=S.answers[t.id];
-  const optList=typeof t.opts==='function'?t.opts(h):t.opts;
+  const opts=document.getElementById('tree-opts');opts.innerHTML='';
+  const cur=S.treeAnswers[step.id];
+  const optList=typeof step.opts==='function'?step.opts(h):step.opts;
   optList.forEach(o=>{
     const btn=document.createElement('button');
     btn.className='q-opt'+(cur===o.val?' selected':'');
-    btn.innerHTML='<div class="q-opt-title">'+o.title+'</div><div class="q-opt-sub">'+o.sub+'</div>';
-    btn.onclick=()=>{S.answers[t.id]=o.val;document.querySelectorAll('.q-opt').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.getElementById('btn-tree-next').disabled=false;};
+    btn.innerHTML=`<div class="q-opt-title">${o.title}</div><div class="q-opt-sub">${o.sub}</div>`;
+    btn.onclick=()=>{S.treeAnswers[step.id]=o.val;document.querySelectorAll('.q-opt').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.getElementById('btn-tree-next').disabled=false;};
     opts.appendChild(btn);
   });
   document.getElementById('btn-tree-next').disabled=!cur;
@@ -428,95 +704,107 @@ function renderTree(){
 }
 
 function treeNext(){
-  if(S.treeIdx<TREES.length-1){S.treeIdx++;document.getElementById('btn-tree-next').disabled=true;renderTree();}
-  else{buildGoals();showView('view-goals');setProgress(4,75);}
+  const tree=TREES[S.activeArea];
+  if(S.treeIdx<tree.length-1){S.treeIdx++;document.getElementById('btn-tree-next').disabled=true;renderTree();}
+  else{showProposal();}
 }
-function treePrev(){if(S.treeIdx>0){S.treeIdx--;renderTree();}else{goData();}}
-function buildGoals(){S.goals=computeGoalOrder(S.hosp,S.answers);S.selected=new Set();renderGoals();}
+function treePrev(){if(S.treeIdx>0){S.treeIdx--;renderTree();}else{goPerf();}}
+function goTreeFromProp(){showView('view-tree');renderTree();}
 
-function renderGoals(){
-  const h=S.hosp;const list=document.getElementById('goals-list');list.innerHTML='';
-  const hasGap=S.goals.filter(g=>!g.stretch);
-  const hasStretch=S.goals.filter(g=>g.stretch);
-  function renderGroup(goals,label){
-    if(!goals.length)return;
-    if(label)list.innerHTML+='<div class="divider-label"><span>'+label+'</span></div>';
-    goals.forEach(g=>{
-      const def=GOAL_DEFS[g.key];if(!def)return;
-      const isSel=S.selected.has(g.key);
-      const tasks=def.subtasksFn(h,S.answers);
-      const kpisHtml=def.kpisFn?'<div class="goal-kpis">'+def.kpisFn(h).join('')+'</div>':'';
-      const taskHtml=tasks.map(t=>'<div class="subtask-item"><div class="subtask-dot"></div><div class="subtask-text">'+t.t+(t.target?'<span class="target-chip">target</span>':'')+'</div></div>').join('');
-      const card=document.createElement('div');
-      card.className='goal-card';card.id='gc-'+g.key;
-      card.innerHTML='<div class="goal-header" onclick="toggleGoal(\''+g.key+'\')"><div class="goal-check'+(isSel?' checked':'')+'" id="chk-'+g.key+'"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="goal-title-wrap"><div class="goal-title">'+def.title+'</div><div class="goal-badges"><span class="badge '+def.badge+'">'+def.badgeLabel+'</span>'+(g.stretch?'<span class="badge b-stretch">stretch goal</span>':'<span class="badge b-gap">gap identified</span>')+'</div></div><div class="goal-weight">wt: '+def.weight+'</div></div>'+kpisHtml+'<div class="subtask-wrap"><div class="subtask-section-label">Recommended tasks</div>'+taskHtml+'</div>';
-      list.appendChild(card);
-    });
-  }
-  renderGroup(hasGap,hasStretch.length>0?'Priority goals — gaps vs. regional benchmark':null);
-  renderGroup(hasStretch,'Stretch goals — at or above benchmark');
-  updateMeter();
-}
-
-function toggleGoal(key){
-  if(S.selected.has(key))S.selected.delete(key);else S.selected.add(key);
-  const chk=document.getElementById('chk-'+key);
-  if(chk)chk.className='goal-check'+(S.selected.has(key)?' checked':'');
-  updateMeter();
+/* ─── PROPOSAL ──────────────────────────────────────── */
+function showProposal(){
+  const h=S.hosp;
+  const goal=buildGoal(S.activeArea,S.treeAnswers,h);
+  S._pendingGoal={...goal,areaId:S.activeArea};
+  document.getElementById('prop-eyebrow').textContent=areaLabel(S.activeArea)+' goal proposal';
+  const targetTask=goal.tasks.find(t=>t.target);
+  const tasksHtml=goal.tasks.map(t=>`<div class="task-item"><div class="task-dot"></div><div class="task-text">${t.t}${t.target?'<span class="target-chip">target</span>':''}</div></div>`).join('');
+  document.getElementById('prop-content').innerHTML=`
+    <div class="proposal-label">Proposed goal</div>
+    <div class="proposal-title">${goal.title}</div>
+    <div class="proposal-kpis">${goal.kpis.join('')}</div>
+    <div class="proposal-tasks-label">Recommended tasks</div>
+    ${tasksHtml}
+    <div style="display:flex;gap:8px;margin-top:12px;align-items:center;flex-wrap:wrap">
+      <span class="badge ${goal.badge}">${goal.badgeLabel}</span>
+      <span style="font-size:11px;color:var(--text-3)">Implementation weight: ${goal.weight}/10</span>
+    </div>`;
+  showView('view-proposal');
+  setProgress('Step 2 of 3 — Review goal proposal',66);
 }
 
-function updateMeter(){
-  let total=0;S.selected.forEach(k=>{if(GOAL_DEFS[k])total+=GOAL_DEFS[k].weight;});
-  const pct=Math.min(100,(total/10)*100);
-  const fill=document.getElementById('meter-fill');
-  fill.style.width=pct+'%';
-  fill.style.background=total>10?'#D85A30':total>7?'#FDB913':'#09A961';
-  document.getElementById('meter-count').textContent=total+' / 10 weight points selected';
-  document.getElementById('meter-warn').style.display=total>10?'block':'none';
-  document.getElementById('btn-goals-next').disabled=S.selected.size===0;
+/* ─── ADD TO PLAN ───────────────────────────────────── */
+function addGoalToPlan(){
+  // Replace if same area already in plan
+  S.plan=S.plan.filter(g=>g.areaId!==S._pendingGoal.areaId);
+  S.plan.push(S._pendingGoal);
+  S._pendingGoal=null;
+  goPerf();
 }
 
-function goSummary(){
+/* ─── ACTION PLAN ───────────────────────────────────── */
+function goPlan(){
   const h=S.hosp;
   const today=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
-  document.getElementById('cover-sub').textContent='For '+h.name+' · Prepared by '+S.preparer+' on '+today;
-  document.getElementById('chip-hosp').textContent=h.short;
-  document.getElementById('chip-by').textContent='By: '+S.preparer;
-  document.getElementById('chip-date').textContent=today;
-  document.getElementById('chip-quarter').textContent=S.quarter;
-  const list=document.getElementById('summary-list');list.innerHTML='';
-  let totalWeight=0;
-  S.selected.forEach(k=>{
-    const def=GOAL_DEFS[k];if(!def)return;
-    totalWeight+=def.weight;
-    const tasks=def.subtasksFn(h,S.answers);
-    const targetTask=tasks.find(t=>t.target);
-    const taskCount=tasks.filter(t=>!t.target).length;
-    list.innerHTML+='<div class="summary-row"><div><div class="s-goal">'+def.title+'</div>'+(targetTask?'<div class="s-target">'+targetTask.t+'</div>':'')+'</div><div class="s-tasks">'+taskCount+' task'+(taskCount!==1?'s':'')+'</div></div>';
-  });
-  const wLabel=document.getElementById('sum-weight');
-  wLabel.textContent=totalWeight+' / 10 weight points';
-  wLabel.style.color=totalWeight>10?'#993C1D':'#09A961';
-  const detail=document.getElementById('sum-detail');
-  detail.innerHTML='<div style="font-size:11px;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Full task list by goal</div>';
-  S.selected.forEach(k=>{
-    const def=GOAL_DEFS[k];if(!def)return;
-    const tasks=def.subtasksFn(h,S.answers);
-    const kpisHtml=def.kpisFn?'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px">'+def.kpisFn(h).join('')+'</div>':'';
-    detail.innerHTML+='<div style="margin-bottom:18px;padding-bottom:18px;border-bottom:0.5px solid var(--border)"><div style="font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px">'+def.title+'</div>'+kpisHtml+tasks.map(t=>'<div class="subtask-item"><div class="subtask-dot"></div><div class="subtask-text">'+t.t+(t.target?'<span class="target-chip">target</span>':'')+'</div></div>').join('')+'</div>';
-  });
-  showView('view-summary');setProgress(4,100);
+  document.getElementById('plan-cover-sub').textContent='For '+h.name+' · Prepared by '+S.preparer+' on '+today;
+  document.getElementById('plan-chip-hosp').textContent=h.short;
+  document.getElementById('plan-chip-by').textContent='By: '+S.preparer;
+  document.getElementById('plan-chip-date').textContent=today;
+  document.getElementById('plan-chip-q').textContent=S.quarter;
+  renderPlan();
+  showView('view-plan');
+  setProgress('Step 3 of 3 — Action plan',100);
 }
 
-function goGoals(){showView('view-goals');setProgress(4,75);}
+function renderPlan(){
+  const list=document.getElementById('plan-goals-list');
+  const empty=document.getElementById('plan-empty');
+  if(S.plan.length===0){list.innerHTML='';empty.classList.remove('hidden');updatePlanMeter();return;}
+  empty.classList.add('hidden');
+  list.innerHTML='';
+  S.plan.forEach((g,i)=>{
+    const tasksHtml=g.tasks.map(t=>`<div class="plan-task-item"><div class="plan-task-dot"></div><div class="plan-task-text">${t.t}${t.target?'<span class="target-chip">target</span>':''}</div></div>`).join('');
+    const div=document.createElement('div');
+    div.className='plan-goal';div.id='pg-'+i;
+    div.innerHTML=`
+      <div class="plan-goal-header">
+        <div class="plan-goal-icon"><svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 5.5,10.5 12,3.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="plan-goal-info">
+          <div class="plan-goal-title">${g.title}</div>
+          ${g.target?`<div class="plan-goal-target">${g.target}</div>`:''}
+          <div class="plan-goal-meta"><span class="badge ${g.badge}">${g.badgeLabel}</span><span class="plan-goal-wt">Weight: ${g.weight}/10</span></div>
+        </div>
+        <button class="plan-goal-delete no-print" onclick="deleteGoal(${i})" title="Remove goal">✕</button>
+      </div>
+      <div class="plan-tasks" style="padding-top:10px">${tasksHtml}</div>`;
+    list.appendChild(div);
+  });
+  updatePlanMeter();
+}
 
+function deleteGoal(idx){
+  S.plan.splice(idx,1);
+  renderPlan();
+}
+
+function updatePlanMeter(){
+  let total=0;S.plan.forEach(g=>total+=g.weight);
+  const pct=Math.min(100,(total/10)*100);
+  const fill=document.getElementById('plan-meter-fill');
+  fill.style.width=pct+'%';
+  fill.style.background=total>10?'#D85A30':total>7?'#FDB913':'#09A961';
+  document.getElementById('plan-meter-count').textContent=total+' / 10 weight points';
+  document.getElementById('plan-meter-warn').style.display=total>10?'block':'none';
+}
+
+/* ─── RESTART ───────────────────────────────────────── */
 function restart(){
-  S={hosp:null,treeIdx:0,answers:{},goals:[],selected:new Set(),preparer:'',quarter:'Q2 2026'};
+  S={hosp:null,preparer:'',quarter:'Q2 2026',activeArea:null,treeIdx:0,treeAnswers:{},plan:[]};
   document.getElementById('hosp-sel').value='';
-  document.getElementById('preparer-name').value='';
+  document.getElementById('preparer').value='';
   document.getElementById('quarter-sel').value='Q2 2026';
-  document.getElementById('btn-s1-next').disabled=true;
-  showView('view-select');setProgress(1,0);
+  document.getElementById('btn-s1').disabled=true;
+  goSelect();
 }
 </script>
 </body>
